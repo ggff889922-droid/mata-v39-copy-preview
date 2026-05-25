@@ -1,0 +1,4744 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>沐馨窗簾設計｜大面窗光感與隱私 v39</title>
+  <meta name="description" content="直立柔紗簾 / 穿越簾精品銷售頁。以大圖、情境、判斷流程與案例細節，協助大面窗屋主先理解光線與隱私，再傳照片諮詢。">
+  <style>
+    :root {
+      --ink: #171713;
+      --muted: #6e6a61;
+      --paper: #f8f5ee;
+      --warm: #ede6da;
+      --mist: #dfd8ca;
+      --forest: #14231d;
+      --forest-2: #20392f;
+      --cream: #fffaf1;
+      --moss: #496f5e;
+      --gold: #bd9354;
+      --line: rgba(23, 23, 19, .14);
+      --light-line: rgba(255, 255, 255, .2);
+      --content: 1160px;
+      --wide: 1480px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.62;
+      letter-spacing: 0;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; width: 100%; }
+    p, h1, h2, h3, figure { margin: 0; }
+
+    .wrap { width: min(var(--content), calc(100% - 48px)); margin: 0 auto; }
+    .wide { width: min(var(--wide), calc(100% - 48px)); margin: 0 auto; }
+
+    .nav {
+      position: fixed;
+      z-index: 80;
+      inset: 0 0 auto;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(20px, 4vw, 46px);
+      color: rgba(255,255,255,.9);
+      background: rgba(16, 24, 20, .64);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(22px);
+    }
+    .brand {
+      font-size: .92rem;
+      font-weight: 950;
+      line-height: 1.16;
+    }
+    .brand span {
+      display: block;
+      color: rgba(255,255,255,.55);
+      font-size: .72rem;
+      font-weight: 720;
+    }
+    .nav-links {
+      display: flex;
+      gap: 23px;
+      align-items: center;
+      color: rgba(255,255,255,.72);
+      font-size: .84rem;
+      font-weight: 850;
+    }
+    .nav-links a:last-child {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      color: var(--ink);
+      background: #fff;
+      border-radius: 999px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--moss);
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 46px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .dark .eyebrow,
+    .hero .eyebrow,
+    .image-story .eyebrow,
+    .final .eyebrow { color: #e8c37d; }
+
+    h1, h2, h3 {
+      font-weight: 950;
+      letter-spacing: 0;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
+    }
+    h1 {
+      max-width: 790px;
+      margin-top: 20px;
+      color: #fff;
+      font-size: clamp(3rem, 4.9vw, 5.7rem);
+      line-height: 1;
+    }
+    h2 {
+      margin-top: 18px;
+      font-size: clamp(2.1rem, 4.8vw, 5rem);
+      line-height: 1.02;
+    }
+    h3 {
+      font-size: clamp(1.18rem, 2vw, 1.78rem);
+      line-height: 1.16;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.35vw, 1.16rem);
+      font-weight: 680;
+    }
+    .dark .lead,
+    .hero .lead,
+    .image-story .lead,
+    .final .lead { color: rgba(255,255,255,.74); }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: .92rem;
+      font-weight: 950;
+      line-height: 1.15;
+    }
+    .btn-primary { color: #fff; background: var(--moss); }
+    .btn-light { color: var(--ink); background: #fff; }
+    .btn-ghost { color: inherit; border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.08); }
+    .paper .btn-ghost,
+    .warm .btn-ghost { border-color: rgba(23,23,19,.22); background: rgba(255,255,255,.45); }
+
+    .section { padding: clamp(88px, 9vw, 138px) 0; }
+    .paper { background: var(--paper); }
+    .warm { background: var(--warm); }
+    .dark { color: #fff; background: var(--forest); }
+
+    .hero {
+      min-height: 92svh;
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: end;
+      padding: 92px 0 72px;
+      color: #fff;
+      background: #101713;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("generated-assets/v32-ai-vertical-sheer/day-living-vertical-sheer.png") center / cover;
+      filter: saturate(.72);
+      transform: scale(1.04);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(14,21,17,.92), rgba(14,21,17,.58) 52%, rgba(14,21,17,.82)),
+        linear-gradient(180deg, rgba(14,21,17,.08), rgba(14,21,17,.72));
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .58fr) minmax(300px, .42fr);
+      gap: clamp(42px, 8vw, 98px);
+      align-items: center;
+    }
+    .hero-copy {
+      max-width: 820px;
+      min-width: 0;
+    }
+    .hero-copy .lead {
+      max-width: 610px;
+      margin-top: 22px;
+      overflow-wrap: anywhere;
+    }
+    .hero-visual {
+      position: relative;
+      justify-self: end;
+      width: min(470px, 100%);
+      margin-bottom: -42px;
+    }
+    .hero-visual figure {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 38px 100px rgba(0,0,0,.42);
+    }
+    .hero-visual img {
+      height: clamp(440px, 48vw, 640px);
+      object-fit: cover;
+    }
+    .hero-visual figcaption {
+      position: absolute;
+      left: -34px;
+      right: 34px;
+      bottom: 32px;
+      padding: 20px 22px;
+      color: #fff;
+      background: rgba(16,24,20,.72);
+      border-left: 3px solid var(--gold);
+      box-shadow: 0 24px 70px rgba(0,0,0,.24);
+      backdrop-filter: blur(16px);
+      font-weight: 950;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      max-width: 720px;
+      margin-top: 34px;
+      color: rgba(255,255,255,.76);
+      font-size: .9rem;
+      font-weight: 860;
+    }
+    .hero-proof span {
+      position: relative;
+      padding-left: 18px;
+    }
+    .hero-proof span::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .52em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+    .cinema-scroll {
+      --cinema-p: 0;
+      --day-opacity: 1;
+      --night-opacity: 0;
+      --curtain-opacity: .08;
+      --glare-opacity: .72;
+      --sight-opacity: 0;
+      position: relative;
+      min-height: 340svh;
+      color: #fff;
+      background: #020403;
+      overflow: clip;
+    }
+    .cinema-sticky {
+      position: sticky;
+      top: 0;
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      padding: 84px 0 56px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .cinema-sticky::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(110deg, rgba(73,111,94,.24), transparent 38%),
+        linear-gradient(180deg, rgba(255,255,255,.04), transparent 28%),
+        #020403;
+    }
+    .cinema-sticky::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      z-index: -1;
+      height: 28%;
+      background: linear-gradient(180deg, transparent, rgba(2,4,3,.94));
+      pointer-events: none;
+    }
+    .cinema-layout {
+      width: min(1320px, calc(100% - 52px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(390px, .4fr) minmax(0, .6fr);
+      gap: clamp(34px, 5.5vw, 88px);
+      align-items: center;
+    }
+    .cinema-copy {
+      position: relative;
+      z-index: 3;
+      min-width: 0;
+    }
+    .cinema-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #e8c37d;
+      font-size: .86rem;
+      font-weight: 950;
+    }
+    .cinema-kicker::before {
+      content: "";
+      width: 46px;
+      height: 1px;
+      background: currentColor;
+    }
+    .cinema-copy h1 {
+      max-width: 680px;
+      margin-top: 18px;
+      color: #fff;
+      font-size: clamp(3rem, 4.65vw, 5.25rem);
+      line-height: .97;
+    }
+    .cinema-copy .lead {
+      max-width: 480px;
+      margin-top: 24px;
+      color: rgba(255,255,255,.68);
+      font-size: clamp(1rem, 1.22vw, 1.13rem);
+      font-weight: 760;
+    }
+    .cinema-steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 30px;
+      color: rgba(255,255,255,.6);
+      font-size: .9rem;
+      font-weight: 850;
+    }
+    .cinema-steps span {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+    .cinema-steps b {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      color: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: .78rem;
+    }
+    .cinema-steps span.is-active {
+      color: #fff;
+    }
+    .cinema-steps span.is-active b {
+      color: #101713;
+      background: #e8c37d;
+      border-color: #e8c37d;
+    }
+    .cinema-stage {
+      position: relative;
+      min-width: 0;
+      min-height: min(56vw, 660px);
+      overflow: hidden;
+      border-radius: 34px;
+      background: #030403;
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: 0 60px 170px rgba(0,0,0,.58);
+      transform: perspective(1200px) translateY(calc(var(--cinema-p) * -18px)) scale(calc(1 + var(--cinema-p) * .035));
+      transform-origin: center;
+    }
+    .cinema-photo {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .cinema-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(calc(1.05 + var(--cinema-p) * .06)) translateX(calc(var(--cinema-p) * -18px));
+      filter: saturate(.9) contrast(1.02);
+    }
+    .cinema-day {
+      opacity: var(--day-opacity);
+    }
+    .cinema-night {
+      opacity: var(--night-opacity);
+    }
+    .cinema-night img {
+      filter: brightness(.68) saturate(.78) contrast(1.08);
+      transform: scale(calc(1.04 + var(--cinema-p) * .04)) translateX(calc(var(--cinema-p) * 12px));
+    }
+    .cinema-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(2,4,3,.78), transparent 31%, transparent 63%, rgba(2,4,3,.74)),
+        linear-gradient(180deg, transparent 45%, rgba(2,4,3,.82));
+      pointer-events: none;
+    }
+    .cinema-glare {
+      position: absolute;
+      inset: -10% -20% auto auto;
+      width: 72%;
+      height: 58%;
+      background: radial-gradient(ellipse at center, rgba(255,239,190,.92), rgba(255,213,128,.34) 38%, transparent 70%);
+      opacity: var(--glare-opacity);
+      mix-blend-mode: screen;
+      filter: blur(3px);
+      transform: translateX(calc(var(--cinema-p) * -62px));
+    }
+    .cinema-curtain {
+      position: absolute;
+      inset: 0;
+      opacity: var(--curtain-opacity);
+      background:
+        repeating-linear-gradient(90deg,
+          rgba(255,255,255,.12) 0 7px,
+          rgba(255,255,255,.42) 7px 10px,
+          rgba(255,255,255,.08) 10px 22px);
+      mix-blend-mode: screen;
+      filter: blur(.2px);
+      transform: translateX(calc(var(--cinema-p) * 28px));
+      pointer-events: none;
+    }
+    .cinema-sight {
+      position: absolute;
+      inset: 0;
+      opacity: var(--sight-opacity);
+      pointer-events: none;
+    }
+    .cinema-sight span {
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(116,195,161,.95), transparent);
+      transform-origin: center;
+      box-shadow: 0 0 22px rgba(116,195,161,.55);
+    }
+    .cinema-sight span:nth-child(1) { top: 34%; transform: rotate(-7deg); }
+    .cinema-sight span:nth-child(2) { top: 48%; transform: rotate(2deg); }
+    .cinema-sight span:nth-child(3) { top: 62%; transform: rotate(8deg); }
+    .cinema-panel {
+      position: absolute;
+      z-index: 4;
+      left: clamp(18px, 3vw, 42px);
+      right: clamp(18px, 3vw, 42px);
+      bottom: clamp(18px, 3vw, 38px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: end;
+      color: #fff;
+    }
+    .cinema-panel > div {
+      min-width: 0;
+    }
+    .cinema-panel h2 {
+      max-width: 700px;
+      margin-top: 0;
+      font-size: clamp(2rem, 3.75vw, 4.45rem);
+      line-height: 1;
+    }
+    .cinema-panel p {
+      max-width: 480px;
+      margin-top: 16px;
+      color: rgba(255,255,255,.72);
+      font-size: clamp(.98rem, 1.2vw, 1.1rem);
+      font-weight: 780;
+    }
+    .cinema-metrics {
+      display: grid;
+      gap: 10px;
+      min-width: 220px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(8,12,10,.68);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(18px);
+    }
+    .cinema-metrics span {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: rgba(255,255,255,.7);
+      font-size: .82rem;
+      font-weight: 850;
+    }
+    .cinema-metrics b {
+      color: #e8c37d;
+      font-weight: 950;
+    }
+    .cinema-progress {
+      position: absolute;
+      z-index: 4;
+      left: 50%;
+      bottom: 18px;
+      width: min(320px, 42vw);
+      height: 3px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.16);
+      transform: translateX(-50%);
+    }
+    .cinema-progress span {
+      display: block;
+      width: calc(var(--cinema-p) * 100%);
+      height: 100%;
+      background: linear-gradient(90deg, #e8c37d, #74c3a1);
+    }
+    .reel {
+      width: min(390px, 100%);
+      justify-self: center;
+    }
+    .visual-showcase {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background: #030504;
+      padding: clamp(92px, 9vw, 150px) 0;
+    }
+    .visual-showcase.hero-stage {
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      padding: 82px 0 64px;
+    }
+    .visual-showcase::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% auto;
+      height: 64%;
+      background:
+        radial-gradient(circle at 22% 20%, rgba(73, 111, 94, .42), transparent 34%),
+        radial-gradient(circle at 78% 8%, rgba(189, 147, 84, .28), transparent 32%);
+      filter: blur(12px);
+      opacity: .72;
+      pointer-events: none;
+    }
+    .visual-head {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      margin-bottom: clamp(42px, 6vw, 76px);
+    }
+    .hero-stage .visual-head {
+      margin-bottom: 28px;
+    }
+    .visual-head h2 {
+      max-width: 900px;
+      color: #fff;
+      font-size: 5.15rem;
+      line-height: 1;
+    }
+    .gradient-text {
+      display: block;
+      margin-bottom: 8px;
+      background: linear-gradient(96deg, #e8c37d 0%, #fff1bc 32%, #74c3a1 66%, #f5f0df 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .desktop-break { display: none; }
+    .mobile-break { display: none; }
+    .visual-head .lead {
+      max-width: 640px;
+      margin-top: 22px;
+      color: rgba(255,255,255,.64);
+    }
+    .visual-head .btn-row {
+      justify-content: center;
+    }
+    .showcase-shell {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+    .showcase-window {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #080b09;
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 50px 150px rgba(0,0,0,.54);
+    }
+    .showcase-window::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.06), transparent 24%, transparent 76%, rgba(255,255,255,.05)),
+        linear-gradient(180deg, transparent 72%, rgba(3,5,4,.42));
+    }
+    .showcase-track {
+      display: flex;
+      transition: transform .75s cubic-bezier(.2, .85, .2, 1);
+      will-change: transform;
+    }
+    .visual-slide {
+      flex: 0 0 100%;
+      min-width: 100%;
+      min-height: 660px;
+      display: grid;
+      grid-template-columns: minmax(0, .56fr) minmax(320px, .44fr);
+      gap: clamp(28px, 5vw, 76px);
+      align-items: center;
+      padding: clamp(30px, 5vw, 70px);
+      position: relative;
+      isolation: isolate;
+    }
+    .hero-stage .visual-slide {
+      min-height: 500px;
+    }
+    .visual-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(115deg, rgba(255,255,255,.08), transparent 40%),
+        radial-gradient(circle at 28% 38%, rgba(232,195,125,.12), transparent 32%);
+      opacity: .76;
+    }
+    .visual-frame {
+      position: relative;
+      min-width: 0;
+      min-height: 520px;
+      display: grid;
+      align-items: center;
+    }
+    .visual-copy {
+      min-width: 0;
+    }
+    .visual-photo {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #151715;
+      box-shadow: 0 40px 110px rgba(0,0,0,.46);
+      transform: translateY(10px) scale(.98);
+      transition: transform .8s cubic-bezier(.2, .85, .2, 1), opacity .8s ease;
+      opacity: .72;
+    }
+    .visual-slide.is-active .visual-photo {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    .visual-photo img {
+      height: min(58vw, 560px);
+      min-height: 430px;
+      object-fit: cover;
+    }
+    .visual-diagram {
+      position: relative;
+      height: min(58vw, 560px);
+      min-height: 430px;
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: 0 40px 110px rgba(0,0,0,.46);
+      transform: translateY(10px) scale(.98);
+      opacity: .74;
+      transition: transform .8s cubic-bezier(.2, .85, .2, 1), opacity .8s ease;
+    }
+    .visual-slide.is-active .visual-diagram {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    .visual-diagram .answer-window {
+      top: 16%;
+      height: 56%;
+    }
+    .visual-diagram .answer-label {
+      font-size: .86rem;
+    }
+    .commercial-art {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #111815;
+      box-shadow: 0 44px 120px rgba(0,0,0,.46);
+      transform: translateY(10px) scale(.985);
+      opacity: .82;
+      transition: transform .8s cubic-bezier(.2, .85, .2, 1), opacity .8s ease;
+    }
+    .visual-slide.is-active .commercial-art {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    .commercial-art img {
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      transform: scale(1.02);
+    }
+    .commercial-art::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.46)),
+        linear-gradient(90deg, rgba(0,0,0,.28), transparent 46%, rgba(0,0,0,.18));
+      pointer-events: none;
+    }
+    .commercial-art.detail img {
+      object-position: 28% center;
+    }
+    .commercial-mark {
+      position: absolute;
+      z-index: 3;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .commercial-mark span {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(5, 8, 7, .62);
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 30px rgba(0,0,0,.26);
+      backdrop-filter: blur(16px);
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .commercial-mark span:first-child {
+      color: #ffe5a5;
+      background: rgba(52, 40, 20, .68);
+    }
+    .commercial-pin {
+      position: absolute;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      border-radius: 999px;
+      color: #101713;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 18px 45px rgba(0,0,0,.24);
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .commercial-pin::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #e8c37d;
+      box-shadow: 0 0 0 5px rgba(232,195,125,.22);
+    }
+    .commercial-pin.p1 { left: 24px; top: 24px; }
+    .commercial-pin.p2 { right: 24px; top: 24px; }
+    .commercial-pin.p3 { right: 24px; bottom: 88px; }
+    .hero-stage .visual-photo img {
+      height: min(38vw, 420px);
+      min-height: 320px;
+    }
+    .motion-card {
+      position: absolute;
+      display: grid;
+      gap: 8px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      color: #fff;
+      background: rgba(10, 13, 11, .72);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 22px 70px rgba(0,0,0,.36);
+      backdrop-filter: blur(18px);
+      animation: floatCard 4.6s ease-in-out infinite;
+    }
+    .motion-card b {
+      color: #e8c37d;
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .motion-card span {
+      font-size: clamp(1rem, 1.4vw, 1.22rem);
+      font-weight: 950;
+      line-height: 1.28;
+    }
+    .motion-card.left { left: -18px; top: 12%; }
+    .motion-card.right { right: -16px; bottom: 14%; animation-delay: -1.8s; }
+    .motion-line {
+      position: absolute;
+      width: 44%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(232,195,125,.92), transparent);
+      opacity: .9;
+      animation: scanLine 3.8s ease-in-out infinite;
+    }
+    .motion-line.one { left: 8%; top: 31%; }
+    .motion-line.two { right: 8%; bottom: 29%; animation-delay: -1.5s; }
+    .visual-copy h3 {
+      color: #fff;
+      font-size: 3.85rem;
+      line-height: .98;
+    }
+    .visual-copy p {
+      max-width: 510px;
+      margin-top: 22px;
+      color: rgba(255,255,255,.68);
+      font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+      font-weight: 760;
+      line-height: 1.65;
+    }
+    .hero-stage .visual-copy h3 {
+      font-size: clamp(2.75rem, 4vw, 3.35rem);
+      line-height: 1.04;
+    }
+    .hero-stage .visual-copy p {
+      max-width: 460px;
+    }
+    .visual-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .visual-badges span {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: .84rem;
+      font-weight: 900;
+    }
+    .showcase-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 26px;
+    }
+    .visual-dots {
+      display: inline-flex;
+      gap: 10px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .visual-dots button {
+      appearance: none;
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,.48);
+      cursor: pointer;
+      transition: width .25s ease, background .25s ease;
+    }
+    .visual-dots button.is-active {
+      width: 36px;
+      background: #e8c37d;
+    }
+    .visual-pause {
+      appearance: none;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,255,255,.16);
+      font-size: 1.05rem;
+      font-weight: 950;
+      cursor: pointer;
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    @keyframes scanLine {
+      0%, 100% { transform: translateX(-18px); opacity: .25; }
+      50% { transform: translateX(18px); opacity: .95; }
+    }
+    .reel-frame {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 30px;
+      background: #080908;
+      box-shadow: 0 44px 120px rgba(0,0,0,.46);
+    }
+    .reel-frame video {
+      height: 100%;
+      object-fit: cover;
+    }
+    .reel-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 15px 16px;
+      color: #fff;
+      background: rgba(0,0,0,.58);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: .96rem;
+      font-weight: 950;
+      line-height: 1.42;
+      backdrop-filter: blur(16px);
+    }
+
+    .film-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .56fr) minmax(300px, .44fr);
+      gap: clamp(36px, 8vw, 112px);
+      align-items: center;
+    }
+    .film-copy .lead {
+      max-width: 560px;
+      margin-top: 22px;
+    }
+    .film-copy,
+    .day-night-copy,
+    .editorial-copy,
+    .method-head,
+    .lens-copy,
+    .case-copy,
+    .advisor-copy,
+    .photo-cta > div,
+    .statement-inner > div {
+      min-width: 0;
+    }
+
+    .day-night {
+      display: grid;
+      grid-template-columns: minmax(0, .44fr) minmax(320px, .56fr);
+      gap: clamp(38px, 8vw, 112px);
+      align-items: center;
+    }
+    .day-night-copy .lead {
+      max-width: 520px;
+      margin-top: 22px;
+    }
+    .dn-stage {
+      position: relative;
+      overflow: hidden;
+      min-height: 620px;
+      border-radius: 8px;
+      background: #ddd;
+      box-shadow: 0 38px 110px rgba(23, 17, 10, .16);
+    }
+    .dn-stage img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      transition: filter .35s ease, transform .45s ease;
+    }
+    .dn-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(12,18,15,.08), rgba(12,18,15,.72)),
+        linear-gradient(90deg, rgba(12,18,15,.5), rgba(12,18,15,.05));
+      opacity: .54;
+      transition: opacity .35s ease;
+    }
+    .dn-stage[data-mode="night"] img {
+      filter: brightness(.52) saturate(.82);
+      transform: scale(1.025);
+    }
+    .dn-stage[data-mode="night"]::after {
+      opacity: .86;
+    }
+    .mode-tabs {
+      position: absolute;
+      z-index: 3;
+      top: 22px;
+      left: 22px;
+      display: inline-flex;
+      gap: 8px;
+      padding: 7px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.78);
+      backdrop-filter: blur(16px);
+    }
+    .mode-tabs button {
+      appearance: none;
+      min-height: 38px;
+      padding: 8px 18px;
+      border: 0;
+      border-radius: 999px;
+      color: rgba(23,23,19,.7);
+      background: transparent;
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 950;
+      cursor: pointer;
+    }
+    .mode-tabs button.is-active {
+      color: #fff;
+      background: var(--forest);
+    }
+    .dn-panel {
+      position: absolute;
+      z-index: 2;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      max-width: 560px;
+      padding: clamp(22px, 4vw, 34px);
+      color: #fff;
+      background: rgba(16,24,20,.76);
+      border-left: 3px solid var(--gold);
+      backdrop-filter: blur(18px);
+    }
+    .dn-panel b {
+      color: #e8c37d;
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .dn-panel h3 {
+      margin-top: 12px;
+      color: #fff;
+    }
+    .dn-panel p {
+      margin-top: 12px;
+      color: rgba(255,255,255,.78);
+      font-weight: 680;
+    }
+
+    .statement {
+      min-height: 82svh;
+      display: grid;
+      align-items: center;
+    }
+    .statement-inner {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(300px, .42fr);
+      gap: clamp(34px, 8vw, 112px);
+      align-items: end;
+    }
+    .statement h2 {
+      max-width: 900px;
+    }
+    .statement .lead {
+      max-width: 430px;
+      padding-bottom: 10px;
+    }
+    .problem-deck {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(20px, 3vw, 34px);
+      margin-top: 68px;
+    }
+    .problem-card {
+      min-height: 330px;
+      display: grid;
+      align-content: end;
+      padding: clamp(26px, 3.4vw, 40px);
+      border-radius: 8px;
+      background: rgba(255,255,255,.54);
+      border: 1px solid rgba(23,23,19,.1);
+      box-shadow: 0 28px 80px rgba(21, 17, 12, .07);
+    }
+    .problem-card:nth-child(2) {
+      margin-top: 64px;
+    }
+    .problem-card:nth-child(3) {
+      margin-top: 28px;
+    }
+    .problem-card b {
+      color: var(--gold);
+      font-size: .8rem;
+      font-weight: 950;
+    }
+    .problem-card h3 {
+      margin-top: 18px;
+      font-size: clamp(1.45rem, 2.2vw, 2.05rem);
+    }
+    .problem-card p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .image-story {
+      min-height: 96svh;
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: end;
+      color: #fff;
+      background: #111;
+      overflow: hidden;
+    }
+    .image-story img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-story::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(13,18,15,.88), rgba(13,18,15,.34) 58%, rgba(13,18,15,.08)),
+        linear-gradient(180deg, rgba(13,18,15,.1), rgba(13,18,15,.84));
+    }
+    .image-story .wrap {
+      padding: clamp(100px, 12vw, 160px) 0;
+    }
+    .image-story h2 {
+      max-width: 840px;
+    }
+    .image-story .lead {
+      max-width: 560px;
+      margin-top: 24px;
+    }
+
+    .moments-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .56fr) minmax(300px, .44fr);
+      gap: clamp(36px, 8vw, 112px);
+      align-items: center;
+      margin-top: 56px;
+    }
+    .mosaic {
+      position: relative;
+      min-height: 650px;
+    }
+    .mosaic figure {
+      position: absolute;
+      overflow: hidden;
+      margin: 0;
+      background: #ddd;
+      border-radius: 8px;
+      box-shadow: 0 32px 90px rgba(23, 17, 10, .16);
+    }
+    .mosaic figure:nth-child(1) {
+      inset: 0 18% 16% 0;
+    }
+    .mosaic figure:nth-child(2) {
+      right: 0;
+      bottom: 0;
+      width: 48%;
+      height: 46%;
+    }
+    .mosaic figure:nth-child(3) {
+      right: 8%;
+      top: 8%;
+      width: 34%;
+      height: 32%;
+      box-shadow: 0 24px 70px rgba(23, 17, 10, .2);
+    }
+    .mosaic img {
+      height: 100%;
+      object-fit: cover;
+    }
+    .moments {
+      display: grid;
+      gap: clamp(28px, 4vw, 52px);
+    }
+    .moment b {
+      color: var(--moss);
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .moment h3 {
+      max-width: 620px;
+      margin-top: 10px;
+    }
+    .moment p {
+      max-width: 520px;
+      margin-top: 12px;
+      color: var(--ink);
+      font-size: clamp(1.12rem, 1.55vw, 1.3rem);
+      font-weight: 920;
+      line-height: 1.45;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .55fr) minmax(300px, .45fr);
+      gap: clamp(38px, 7vw, 96px);
+      align-items: center;
+    }
+    .editorial-media {
+      overflow: hidden;
+      background: #ddd;
+      border-radius: 8px;
+    }
+    .editorial-media img {
+      height: clamp(520px, 54vw, 760px);
+      object-fit: cover;
+    }
+    .editorial-copy .lead {
+      max-width: 540px;
+      margin-top: 22px;
+    }
+    .micro-list {
+      display: grid;
+      gap: 18px;
+      max-width: 560px;
+      margin-top: 34px;
+    }
+    .micro-list div {
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    .micro-list b {
+      color: var(--moss);
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .micro-list span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-weight: 680;
+    }
+
+    .method {
+      display: grid;
+      grid-template-columns: minmax(300px, .42fr) minmax(0, .58fr);
+      gap: clamp(36px, 8vw, 112px);
+      align-items: start;
+    }
+    .method-head {
+      position: sticky;
+      top: 96px;
+    }
+    .method-head .lead {
+      max-width: 440px;
+      margin-top: 22px;
+    }
+    .method-list {
+      border-top: 1px solid var(--light-line);
+    }
+    .method-item {
+      min-height: 260px;
+      display: grid;
+      align-content: center;
+      padding: 42px 0;
+      border-bottom: 1px solid var(--light-line);
+    }
+    .method-item b {
+      color: #e8c37d;
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .method-item h3 {
+      max-width: 620px;
+      margin-top: 16px;
+      color: #fff;
+    }
+    .method-item p {
+      max-width: 600px;
+      margin-top: 16px;
+      color: rgba(255,255,255,.72);
+      font-weight: 680;
+    }
+
+    .choice {
+      display: grid;
+      gap: 18px;
+      margin-top: 50px;
+    }
+    .choice-row {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: clamp(24px, 6vw, 86px);
+      padding: clamp(28px, 4vw, 46px);
+      border-radius: 8px;
+      border: 1px solid rgba(23,23,19,.1);
+      background: rgba(255,255,255,.52);
+      box-shadow: 0 24px 70px rgba(21, 17, 12, .06);
+    }
+    .choice-row:nth-child(2) {
+      margin-left: clamp(0px, 5vw, 70px);
+    }
+    .choice-row:nth-child(3) {
+      margin-right: clamp(0px, 5vw, 70px);
+    }
+    .choice-row b {
+      color: var(--moss);
+      font-size: .86rem;
+      font-weight: 950;
+    }
+    .choice-row h3 {
+      max-width: 760px;
+    }
+    .choice-row p {
+      max-width: 760px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-weight: 680;
+    }
+
+    .lens {
+      display: grid;
+      gap: clamp(22px, 3vw, 34px);
+      margin-top: 50px;
+    }
+    .lens-item {
+      display: grid;
+      grid-template-columns: minmax(280px, .44fr) minmax(0, .56fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: center;
+      padding: clamp(20px, 3vw, 34px);
+      background: rgba(255,255,255,.38);
+      border-radius: 8px;
+    }
+    .lens-media {
+      overflow: hidden;
+      border-radius: 8px;
+      background: #ddd;
+    }
+    .lens-media img {
+      height: 310px;
+      object-fit: cover;
+    }
+    .lens-copy b {
+      color: var(--ink);
+      font-size: .86rem;
+      font-weight: 950;
+    }
+    .lens-copy h3 {
+      margin-top: 18px;
+    }
+    .lens-copy p {
+      max-width: 680px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-weight: 680;
+    }
+    .lens-copy span {
+      display: block;
+      max-width: 680px;
+      margin-top: 16px;
+      color: var(--moss);
+      font-weight: 950;
+    }
+
+    .case-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .62fr) minmax(300px, .38fr);
+      gap: clamp(34px, 6vw, 84px);
+      align-items: end;
+      margin-top: 52px;
+    }
+    .case-layout figure {
+      overflow: hidden;
+      background: #ddd;
+      border-radius: 8px;
+    }
+    .case-layout img {
+      height: clamp(520px, 56vw, 760px);
+      object-fit: cover;
+    }
+    .case-copy {
+      padding-bottom: 24px;
+    }
+    .case-copy p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 680;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: minmax(0, .62fr) minmax(260px, .38fr);
+      gap: 22px;
+      margin-top: 48px;
+    }
+    .gallery figure { overflow: hidden; background: #ddd; border-radius: 8px; }
+    .gallery-main img {
+      height: 650px;
+      object-fit: cover;
+    }
+    .gallery-side {
+      display: grid;
+      gap: 22px;
+    }
+    .gallery-side img {
+      height: 314px;
+      object-fit: cover;
+    }
+
+    .journey {
+      display: grid;
+      gap: 0;
+      max-width: 920px;
+      margin-top: 54px;
+    }
+    .journey article {
+      position: relative;
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: clamp(20px, 5vw, 64px);
+      padding: clamp(28px, 4vw, 48px) 0;
+    }
+    .journey article::before {
+      content: "";
+      position: absolute;
+      left: 58px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--line);
+    }
+    .journey article:first-child::before { top: 48px; }
+    .journey article:last-child::before { bottom: calc(100% - 48px); }
+    .journey b {
+      position: relative;
+      z-index: 1;
+      width: 116px;
+      height: 116px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: var(--moss);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      }
+    .journey h3 {
+      max-width: 620px;
+      font-size: clamp(1.22rem, 2vw, 1.75rem);
+    }
+    .journey p {
+      max-width: 560px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-weight: 680;
+    }
+
+    .advisor {
+      display: grid;
+      grid-template-columns: minmax(300px, .45fr) minmax(0, .55fr);
+      gap: clamp(38px, 8vw, 112px);
+      align-items: center;
+    }
+    .advisor-copy .lead {
+      max-width: 520px;
+      margin-top: 22px;
+    }
+    .chat-card {
+      overflow: hidden;
+      border-radius: 18px;
+      background: #f4f0e7;
+      box-shadow: 0 34px 90px rgba(16, 13, 8, .16);
+    }
+    .chat-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      color: #fff;
+      background: #213a31;
+    }
+    .chat-top b {
+      font-weight: 950;
+    }
+    .chat-top span {
+      color: rgba(255,255,255,.62);
+      font-size: .82rem;
+      font-weight: 760;
+    }
+    .chat-body {
+      display: grid;
+      gap: 14px;
+      padding: clamp(20px, 4vw, 34px);
+    }
+    .bubble {
+      max-width: 78%;
+      padding: 14px 16px;
+      border-radius: 18px;
+      font-weight: 760;
+      line-height: 1.48;
+    }
+    .bubble.user {
+      justify-self: end;
+      color: #fff;
+      background: #4c735f;
+      border-bottom-right-radius: 6px;
+    }
+    .bubble.brand {
+      color: var(--ink);
+      background: #fff;
+      border-bottom-left-radius: 6px;
+      box-shadow: 0 10px 28px rgba(23, 17, 10, .08);
+    }
+    .chat-photo {
+      justify-self: end;
+      width: min(280px, 78%);
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(23, 17, 10, .16);
+    }
+    .chat-photo img {
+      height: 210px;
+      object-fit: cover;
+    }
+    .chat-upload {
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+      background: #17251f;
+    }
+    .chat-upload span {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: rgba(255,255,255,.86);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 18%),
+        rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: .84rem;
+      font-weight: 900;
+    }
+    .trust-note {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 52px;
+    }
+    .trust-note div {
+      min-height: 190px;
+      padding: clamp(22px, 3vw, 34px);
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid rgba(23,23,19,.1);
+      box-shadow: 0 24px 70px rgba(21, 17, 12, .06);
+    }
+    .trust-note b {
+      color: var(--moss);
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .trust-note p {
+      margin-top: 18px;
+      color: var(--ink);
+      font-size: clamp(1.08rem, 1.4vw, 1.22rem);
+      font-weight: 920;
+      line-height: 1.45;
+    }
+
+    .diagnosis-lab {
+      color: #fff;
+      background:
+        linear-gradient(180deg, #030504 0%, #101a15 58%, #030504 100%);
+      overflow: hidden;
+    }
+    .diagnosis-intro {
+      display: grid;
+      grid-template-columns: minmax(0, .58fr) minmax(300px, .42fr);
+      gap: clamp(34px, 7vw, 90px);
+      align-items: end;
+    }
+    .diagnosis-intro h2 {
+      max-width: 820px;
+      color: #fff;
+    }
+    .diagnosis-intro .lead {
+      max-width: 520px;
+      margin-top: 0;
+      color: rgba(255,255,255,.68);
+    }
+    .diagnosis-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(18px, 2.4vw, 28px);
+      margin-top: clamp(44px, 6vw, 74px);
+    }
+    .diagnosis-card {
+      min-height: 520px;
+      position: relative;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+      padding: clamp(22px, 2.8vw, 34px);
+      border-radius: 32px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.04)),
+        #111815;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 34px 100px rgba(0,0,0,.34);
+    }
+    .diagnosis-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: radial-gradient(circle at 28% 0%, rgba(232,195,125,.28), transparent 34%);
+      pointer-events: none;
+    }
+    .scene-diagram {
+      position: relative;
+      min-height: 282px;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 20% 12%, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(180deg, #26312c 0%, #111815 100%);
+      border: 1px solid rgba(255,255,255,.14);
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    }
+    .scene-diagram::before {
+      content: "";
+      position: absolute;
+      left: 7%;
+      right: 7%;
+      bottom: 18%;
+      height: 1px;
+      background: rgba(255,255,255,.16);
+    }
+    .scene-window {
+      position: absolute;
+      left: 11%;
+      top: 12%;
+      width: 54%;
+      height: 62%;
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(220,236,230,.28), rgba(95,130,116,.1)),
+        linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px 20%);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 20px 45px rgba(0,0,0,.3);
+      overflow: hidden;
+    }
+    .scene-window::before {
+      content: "";
+      position: absolute;
+      left: -3%;
+      right: -3%;
+      top: -8px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(232,195,125,.9), rgba(255,255,255,.42), rgba(116,195,161,.5));
+    }
+    .scene-curtain {
+      position: absolute;
+      inset: 12px 16px 14px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 5px;
+    }
+    .scene-curtain i {
+      display: block;
+      border-radius: 999px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.7), rgba(255,255,255,.18) 46%, rgba(255,255,255,.5));
+      opacity: .86;
+      transform: skewY(var(--tilt, 0deg));
+    }
+    .scene-curtain i:nth-child(odd) { --tilt: -2deg; opacity: .72; }
+    .scene-curtain i:nth-child(3n) { --tilt: 2deg; }
+    .scene-sofa,
+    .scene-tv,
+    .scene-table,
+    .scene-lamp,
+    .scene-wall {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.09);
+      box-shadow: 0 14px 34px rgba(0,0,0,.2);
+    }
+    .scene-sofa {
+      left: 13%;
+      bottom: 9%;
+      width: 32%;
+      height: 12%;
+      border-radius: 18px 18px 8px 8px;
+    }
+    .scene-table {
+      left: 48%;
+      bottom: 9%;
+      width: 17%;
+      height: 6%;
+      border-radius: 999px;
+      background: rgba(232,195,125,.18);
+    }
+    .scene-tv {
+      right: 10%;
+      bottom: 24%;
+      width: 21%;
+      height: 20%;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.02));
+    }
+    .scene-lamp {
+      right: 16%;
+      bottom: 11%;
+      width: 12px;
+      height: 46px;
+      border-radius: 999px;
+      background: rgba(232,195,125,.45);
+      box-shadow: 0 0 44px rgba(232,195,125,.35);
+    }
+    .scene-building {
+      position: absolute;
+      right: 8%;
+      top: 15%;
+      width: 22%;
+      height: 50%;
+      border-radius: 12px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px 33%),
+        linear-gradient(180deg, rgba(255,255,255,.18) 0 1px, transparent 1px 22%),
+        rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      opacity: .76;
+    }
+    .scene-sun {
+      position: absolute;
+      right: 13%;
+      top: 10%;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #f1c66e;
+      box-shadow: 0 0 58px rgba(232,195,125,.8);
+    }
+    .scene-ray,
+    .scene-sight,
+    .scene-measure {
+      position: absolute;
+      height: 2px;
+      border-radius: 999px;
+      transform-origin: left center;
+      pointer-events: none;
+    }
+    .scene-ray {
+      right: 18%;
+      width: 62%;
+      background: linear-gradient(90deg, rgba(232,195,125,.9), rgba(232,195,125,.08));
+      box-shadow: 0 0 28px rgba(232,195,125,.42);
+      animation: scanLine 4.6s ease-in-out infinite;
+    }
+    .scene-ray.r1 { top: 31%; transform: rotate(160deg); }
+    .scene-ray.r2 { top: 45%; transform: rotate(173deg); animation-delay: -1.3s; }
+    .scene-ray.r3 { top: 58%; transform: rotate(190deg); animation-delay: -2.4s; }
+    .scene-sight {
+      left: 48%;
+      width: 47%;
+      background: linear-gradient(90deg, rgba(116,195,161,.88), rgba(116,195,161,.06));
+      box-shadow: 0 0 22px rgba(116,195,161,.44);
+    }
+    .scene-sight.s1 { top: 37%; transform: rotate(14deg); }
+    .scene-sight.s2 { top: 51%; transform: rotate(4deg); animation: scanLine 4.2s ease-in-out infinite; }
+    .scene-sight.s3 { top: 64%; transform: rotate(-8deg); }
+    .scene-wall {
+      left: 10%;
+      top: 10%;
+      width: 57%;
+      height: 65%;
+      border-radius: 18px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 11%),
+        rgba(255,255,255,.035);
+    }
+    .scene-wall .scene-window {
+      left: 12%;
+      top: 13%;
+      width: 64%;
+      height: 69%;
+    }
+    .scene-measure {
+      background: #e8c37d;
+      box-shadow: 0 0 18px rgba(232,195,125,.45);
+    }
+    .scene-measure.m1 {
+      left: 11%;
+      top: 8%;
+      width: 57%;
+    }
+    .scene-measure.m2 {
+      left: 72%;
+      top: 14%;
+      width: 42%;
+      transform: rotate(90deg);
+    }
+    .scene-note {
+      position: absolute;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(5,8,7,.76);
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+      font-size: .78rem;
+      font-weight: 950;
+      white-space: nowrap;
+      backdrop-filter: blur(10px);
+    }
+    .scene-note.gold { color: #ffe5a5; }
+    .scene-note.green { color: #aee8cf; }
+    .scene-note.blue { color: #d9ecff; }
+    .scene-note.n1 { left: 8%; top: 7%; }
+    .scene-note.n2 { right: 8%; top: 34%; }
+    .scene-note.n3 { left: 13%; bottom: 6%; }
+    .scene-note.n4 { right: 8%; bottom: 8%; }
+    .scene-caption {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      bottom: 6%;
+      z-index: 1;
+      padding: 11px 13px;
+      border-radius: 14px;
+      color: rgba(255,255,255,.86);
+      background: rgba(5,8,7,.64);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: .84rem;
+      font-weight: 820;
+      line-height: 1.45;
+      backdrop-filter: blur(10px);
+    }
+    .scene-glare {
+      background:
+        radial-gradient(circle at 84% 16%, rgba(232,195,125,.36), transparent 30%),
+        linear-gradient(180deg, #2d3028 0%, #111815 100%);
+    }
+    .scene-privacy {
+      background:
+        radial-gradient(circle at 72% 78%, rgba(232,195,125,.2), transparent 32%),
+        linear-gradient(180deg, #182620 0%, #07100d 100%);
+    }
+    .scene-proportion {
+      background:
+        radial-gradient(circle at 18% 16%, rgba(116,195,161,.22), transparent 28%),
+        linear-gradient(180deg, #23211b 0%, #111815 100%);
+    }
+    .diagnosis-copy {
+      position: relative;
+      z-index: 1;
+      padding-top: 22px;
+    }
+    .diagnosis-copy b {
+      color: #e8c37d;
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .diagnosis-copy h3 {
+      margin-top: 12px;
+      color: #fff;
+      font-size: clamp(1.62rem, 2.4vw, 2.35rem);
+    }
+    .diagnosis-copy p {
+      margin-top: 14px;
+      color: rgba(255,255,255,.68);
+      font-weight: 720;
+    }
+    .mini-meter {
+      display: grid;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .mini-meter span {
+      position: relative;
+      height: 8px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+    }
+    .mini-meter span::after {
+      content: "";
+      display: block;
+      width: var(--w, 62%);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #e8c37d, #74c3a1);
+    }
+
+    .compare-lab {
+      color: #fff;
+      background: #030504;
+    }
+    .compare-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .42fr) minmax(360px, .58fr);
+      gap: clamp(34px, 7vw, 92px);
+      align-items: center;
+    }
+    .compare-copy h2 { color: #fff; }
+    .compare-copy .lead {
+      max-width: 520px;
+      margin-top: 22px;
+      color: rgba(255,255,255,.68);
+    }
+    .compare-facts {
+      display: grid;
+      gap: 12px;
+      margin-top: 34px;
+    }
+    .compare-facts div {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 18px;
+      padding: 17px 0;
+      border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .compare-facts b {
+      color: #e8c37d;
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .compare-facts span {
+      color: rgba(255,255,255,.74);
+      font-weight: 720;
+    }
+    .compare-stage {
+      --split: 52%;
+      position: relative;
+      min-height: 660px;
+      overflow: hidden;
+      border-radius: 34px;
+      background: #080908;
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 50px 150px rgba(0,0,0,.46);
+    }
+    .compare-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .compare-layer img {
+      height: 100%;
+      object-fit: cover;
+    }
+    .compare-layer .compare-label {
+      position: absolute;
+      z-index: 3;
+      left: 28px;
+      top: 28px;
+      display: grid;
+      gap: 6px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      color: #fff;
+      background: rgba(3,5,4,.62);
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 18px 45px rgba(0,0,0,.28);
+      backdrop-filter: blur(16px);
+    }
+    .compare-layer .compare-label b {
+      color: #e8c37d;
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .compare-layer .compare-label span {
+      font-size: clamp(1rem, 1.4vw, 1.22rem);
+      font-weight: 950;
+      line-height: 1.22;
+    }
+    .compare-layer.night .compare-label {
+      left: auto;
+      right: 28px;
+    }
+    .compare-stage .compare-scene {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .compare-stage .compare-scene .answer-window {
+      left: 12%;
+      top: 14%;
+      width: 48%;
+      height: 58%;
+    }
+    .compare-stage .compare-scene .answer-label {
+      font-size: .82rem;
+    }
+    .compare-stage .answer-label.a3,
+    .compare-stage .answer-label.a4 {
+      bottom: 18%;
+    }
+    .compare-layer.night {
+      z-index: 2;
+      clip-path: inset(0 0 0 var(--split));
+    }
+    .compare-layer.night img {
+      filter: brightness(.55) saturate(.82);
+    }
+    .compare-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, rgba(3,5,4,.02), rgba(3,5,4,.34));
+      pointer-events: none;
+    }
+    .split-handle {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      bottom: 0;
+      left: var(--split);
+      width: 2px;
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 0 28px rgba(255,255,255,.42);
+    }
+    .split-handle::before {
+      content: "拖曳看日夜";
+      position: absolute;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #101713;
+      background: #fff;
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .compare-range {
+      position: absolute;
+      z-index: 4;
+      left: 26px;
+      right: 26px;
+      bottom: 92px;
+      width: calc(100% - 52px);
+      accent-color: #e8c37d;
+    }
+    .compare-caption {
+      position: absolute;
+      z-index: 3;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: rgba(255,255,255,.82);
+      font-weight: 950;
+    }
+    .compare-caption span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(3,5,4,.55);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .risk-show {
+      color: #fff;
+      background:
+        linear-gradient(180deg, #15110d, #070806 78%);
+      overflow: hidden;
+    }
+    .risk-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .48fr) minmax(320px, .52fr);
+      gap: clamp(34px, 7vw, 96px);
+      align-items: center;
+    }
+    .risk-copy h2 { color: #fff; }
+    .risk-copy .lead {
+      max-width: 560px;
+      margin-top: 22px;
+      color: rgba(255,255,255,.7);
+    }
+    .risk-stack {
+      display: grid;
+      gap: 18px;
+    }
+    .risk-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 150px;
+      padding: 24px 26px 24px 94px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 24px 80px rgba(0,0,0,.22);
+    }
+    .risk-card::before {
+      content: attr(data-num);
+      position: absolute;
+      left: 24px;
+      top: 24px;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: #101713;
+      background: #e8c37d;
+      font-size: .86rem;
+      font-weight: 950;
+    }
+    .risk-card h3 {
+      color: #fff;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+    }
+    .risk-card p {
+      margin-top: 10px;
+      color: rgba(255,255,255,.68);
+      font-weight: 720;
+    }
+
+    .decision-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(18px, 2.4vw, 28px);
+      margin-top: 52px;
+    }
+    .decision-card {
+      min-height: 430px;
+      padding: clamp(24px, 3vw, 34px);
+      border-radius: 32px;
+      background: #fff;
+      border: 1px solid rgba(23,23,19,.09);
+      box-shadow: 0 30px 90px rgba(21,17,12,.08);
+    }
+    .decision-card:nth-child(2) { margin-top: 54px; }
+    .decision-card:nth-child(3) { margin-top: 18px; }
+    .decision-tag {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--moss);
+      font-size: .78rem;
+      font-weight: 950;
+    }
+    .decision-card.warning .decision-tag { background: #a86f38; }
+    .decision-card.stop .decision-tag { background: #3b3b37; }
+    .decision-card h3 {
+      margin-top: 28px;
+      font-size: clamp(1.55rem, 2.3vw, 2.1rem);
+    }
+    .decision-card p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 720;
+    }
+    .decision-lines {
+      display: grid;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .decision-lines span {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: .88rem;
+      font-weight: 900;
+    }
+
+    .solution-wall {
+      color: #fff;
+      background: #030504;
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(18px, 2.4vw, 28px);
+      margin-top: 54px;
+    }
+    .solution-card {
+      min-height: 590px;
+      display: grid;
+      grid-template-rows: 330px auto;
+      overflow: hidden;
+      border-radius: 32px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.045)),
+        #111815;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 26px 80px rgba(0,0,0,.32);
+    }
+    .solution-art {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,.12), transparent 34%),
+        linear-gradient(180deg, #27332d, #111815);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .solution-image {
+      position: relative;
+      min-height: 330px;
+      overflow: hidden;
+      background: #111815;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .solution-image img {
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.03);
+    }
+    .solution-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 35%, rgba(3,5,4,.72)),
+        linear-gradient(90deg, rgba(3,5,4,.18), transparent 48%);
+      pointer-events: none;
+    }
+    .solution-image .commercial-mark {
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+    }
+    .solution-image .commercial-mark span {
+      font-size: .78rem;
+      min-height: 32px;
+      padding: 7px 10px;
+    }
+    .solution-art::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      bottom: 17%;
+      height: 1px;
+      background: rgba(255,255,255,.18);
+    }
+    .answer-window {
+      position: absolute;
+      left: 11%;
+      top: 16%;
+      width: 48%;
+      height: 56%;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.22);
+      background:
+        linear-gradient(180deg, rgba(230,242,236,.28), rgba(79,112,98,.1));
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.3);
+    }
+    .answer-window::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      top: 0;
+      height: 10px;
+      background: linear-gradient(90deg, rgba(232,195,125,.9), rgba(255,255,255,.42), rgba(116,195,161,.68));
+    }
+    .answer-slats {
+      position: absolute;
+      inset: 22px 18px 16px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 6px;
+    }
+    .answer-slats i {
+      display: block;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255,255,255,.74), rgba(255,255,255,.16) 48%, rgba(255,255,255,.56));
+      box-shadow: inset 1px 0 0 rgba(255,255,255,.18);
+      opacity: .9;
+    }
+    .answer-sun {
+      position: absolute;
+      right: 14%;
+      top: 15%;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #f2ca70;
+      box-shadow: 0 0 70px rgba(232,195,125,.78);
+    }
+    .answer-ray,
+    .answer-sight {
+      position: absolute;
+      height: 2px;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+    .answer-ray {
+      left: 30%;
+      right: 16%;
+      background: linear-gradient(90deg, rgba(232,195,125,.95), rgba(232,195,125,.06));
+      box-shadow: 0 0 18px rgba(232,195,125,.35);
+    }
+    .answer-ray.r1 { top: 36%; }
+    .answer-ray.r2 { top: 49%; }
+    .answer-ray.r3 { top: 62%; }
+    .answer-sofa,
+    .answer-tv,
+    .answer-table,
+    .answer-lamp,
+    .answer-building,
+    .answer-blackout {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.09);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    .answer-sofa {
+      left: 14%;
+      bottom: 13%;
+      width: 32%;
+      height: 12%;
+      border-radius: 18px 18px 8px 8px;
+    }
+    .answer-tv {
+      right: 10%;
+      bottom: 28%;
+      width: 22%;
+      height: 19%;
+      border-radius: 14px;
+    }
+    .answer-table {
+      left: 50%;
+      bottom: 13%;
+      width: 18%;
+      height: 6%;
+      border-radius: 999px;
+      background: rgba(232,195,125,.18);
+    }
+    .answer-building {
+      right: 10%;
+      top: 15%;
+      width: 23%;
+      height: 56%;
+      border-radius: 14px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.18) 0 1px, transparent 1px 33%),
+        linear-gradient(180deg, rgba(255,255,255,.18) 0 1px, transparent 1px 22%),
+        rgba(255,255,255,.08);
+    }
+    .answer-lamp {
+      right: 18%;
+      bottom: 14%;
+      width: 14px;
+      height: 54px;
+      border-radius: 999px;
+      background: rgba(232,195,125,.52);
+      box-shadow: 0 0 48px rgba(232,195,125,.44);
+    }
+    .answer-blackout {
+      left: 14%;
+      top: 16%;
+      width: 18%;
+      height: 56%;
+      border-radius: 20px 0 0 20px;
+      border-right: 1px solid rgba(232,195,125,.28);
+      background: linear-gradient(180deg, rgba(5,8,7,.92), rgba(5,8,7,.68));
+    }
+    .answer-sight {
+      left: 52%;
+      right: 13%;
+      background: linear-gradient(90deg, rgba(116,195,161,.8), rgba(116,195,161,.08));
+      box-shadow: 0 0 18px rgba(116,195,161,.36);
+      transform-origin: left center;
+    }
+    .answer-sight.s1 { top: 38%; transform: rotate(12deg); }
+    .answer-sight.s2 { top: 52%; transform: rotate(2deg); }
+    .answer-sight.s3 { top: 66%; transform: rotate(-8deg); }
+    .answer-label {
+      position: absolute;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(5,8,7,.8);
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: .78rem;
+      font-weight: 950;
+      white-space: nowrap;
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+    }
+    .answer-label.gold { color: #ffe5a5; }
+    .answer-label.green { color: #aee8cf; }
+    .answer-label.blue { color: #d9ecff; }
+    .answer-label.a1 { left: 9%; top: 9%; }
+    .answer-label.a2 { right: 7%; top: 42%; }
+    .answer-label.a3 { left: 13%; bottom: 8%; }
+    .answer-label.a4 { right: 8%; bottom: 8%; }
+    .solution-soft {
+      background:
+        radial-gradient(circle at 78% 18%, rgba(232,195,125,.34), transparent 32%),
+        linear-gradient(180deg, #2e332a, #111815);
+    }
+    .solution-privacy {
+      background:
+        radial-gradient(circle at 72% 80%, rgba(232,195,125,.2), transparent 32%),
+        linear-gradient(180deg, #14251f, #07100d);
+    }
+    .solution-layered {
+      background:
+        linear-gradient(90deg, rgba(232,195,125,.12), transparent 49%, rgba(116,195,161,.11) 51%, transparent),
+        linear-gradient(180deg, #29291f, #111815);
+    }
+    .solution-layered .answer-window.day {
+      left: 8%;
+      width: 38%;
+    }
+    .solution-layered .answer-window.night {
+      left: auto;
+      right: 8%;
+      width: 38%;
+      background: linear-gradient(180deg, rgba(44,62,56,.7), rgba(8,14,12,.82));
+    }
+    .solution-layered .answer-window.night .answer-slats i {
+      opacity: .48;
+    }
+    .solution-layered .answer-blackout {
+      left: auto;
+      right: 37%;
+      width: 12%;
+      height: 56%;
+      border-radius: 20px 0 0 20px;
+    }
+    .answer-divider {
+      position: absolute;
+      left: 50%;
+      top: 12%;
+      bottom: 18%;
+      width: 1px;
+      background: rgba(255,255,255,.16);
+    }
+    .solution-copy {
+      padding: clamp(24px, 3vw, 34px);
+    }
+    .solution-copy b {
+      color: #e8c37d;
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .solution-copy h3 {
+      margin-top: 14px;
+      color: #fff;
+    }
+    .solution-copy p {
+      margin-top: 14px;
+      color: rgba(255,255,255,.68);
+      font-weight: 720;
+    }
+    .solution-mood {
+      display: grid;
+      grid-template-columns: minmax(0, .48fr) minmax(360px, .52fr);
+      gap: clamp(34px, 7vw, 92px);
+      align-items: end;
+      margin-top: 54px;
+    }
+    .solution-mood-copy {
+      min-width: 0;
+      padding-bottom: clamp(18px, 4vw, 48px);
+    }
+    .solution-mood-copy h3 {
+      max-width: 560px;
+      color: #fff;
+      font-size: clamp(2.2rem, 4vw, 4.35rem);
+      line-height: 1;
+    }
+    .solution-mood-copy p {
+      max-width: 520px;
+      margin-top: 22px;
+      color: rgba(255,255,255,.68);
+      font-size: clamp(1rem, 1.3vw, 1.16rem);
+      font-weight: 720;
+      line-height: 1.75;
+    }
+    .solution-ambient,
+    .mood-visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      background: #111815;
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 42px 130px rgba(0,0,0,.38);
+    }
+    .solution-ambient img,
+    .mood-visual img {
+      height: clamp(460px, 44vw, 640px);
+      object-fit: cover;
+    }
+    .solution-ambient::after,
+    .mood-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.48)),
+        linear-gradient(90deg, rgba(0,0,0,.28), transparent 52%);
+      pointer-events: none;
+    }
+    .mood-caption {
+      position: absolute;
+      z-index: 3;
+      left: 26px;
+      right: 26px;
+      bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .mood-caption span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(5,8,7,.62);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 14px 34px rgba(0,0,0,.26);
+      backdrop-filter: blur(14px);
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .mood-caption span:first-child {
+      color: #ffe5a5;
+      background: rgba(54, 42, 24, .72);
+    }
+    .solution-story {
+      display: grid;
+      gap: 18px;
+      margin-top: clamp(34px, 6vw, 70px);
+    }
+    .solution-story-item {
+      display: grid;
+      grid-template-columns: minmax(280px, .46fr) minmax(0, .54fr);
+      gap: clamp(24px, 4vw, 60px);
+      align-items: center;
+      min-height: 430px;
+      padding: clamp(18px, 2vw, 28px) 0;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .solution-story-item:nth-child(even) {
+      grid-template-columns: minmax(0, .54fr) minmax(280px, .46fr);
+    }
+    .solution-story-item:nth-child(even) .solution-story-image {
+      order: 2;
+    }
+    .solution-story-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 390px;
+      border-radius: 30px;
+      background: #111815;
+      box-shadow: 0 34px 100px rgba(0,0,0,.3);
+    }
+    .solution-story-image img {
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      transform: scale(1.02);
+    }
+    .solution-story-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 48%, rgba(3,5,4,.66));
+      pointer-events: none;
+    }
+    .solution-story-copy {
+      min-width: 0;
+    }
+    .solution-story-copy b {
+      color: #e8c37d;
+      font-size: .86rem;
+      font-weight: 950;
+    }
+    .solution-story-copy h3 {
+      max-width: 560px;
+      margin-top: 14px;
+      color: #fff;
+      font-size: clamp(2rem, 3.2vw, 3.45rem);
+      line-height: 1.04;
+    }
+    .solution-story-copy p {
+      max-width: 520px;
+      margin-top: 18px;
+      color: rgba(255,255,255,.68);
+      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      font-weight: 720;
+      line-height: 1.72;
+    }
+    .solution-story-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .solution-story-points span {
+      min-height: 34px;
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: .82rem;
+      font-weight: 900;
+    }
+
+    .annotated-case {
+      position: relative;
+    }
+    .case-pin {
+      position: absolute;
+      z-index: 2;
+      max-width: 250px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      color: #fff;
+      background: rgba(10,13,11,.72);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 18px 54px rgba(0,0,0,.28);
+      backdrop-filter: blur(16px);
+      font-size: .9rem;
+      font-weight: 900;
+      line-height: 1.42;
+    }
+    .case-pin.one { left: 24px; top: 24px; }
+    .case-pin.two { right: 24px; bottom: 30px; }
+
+    .proof-system {
+      display: grid;
+      grid-template-columns: minmax(300px, .46fr) minmax(0, .54fr);
+      gap: clamp(34px, 7vw, 94px);
+      align-items: center;
+      margin-top: 54px;
+    }
+    .proof-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      background: #ddd;
+      box-shadow: 0 34px 100px rgba(21,17,12,.12);
+    }
+    .proof-photo img {
+      height: clamp(480px, 50vw, 680px);
+      object-fit: cover;
+    }
+    .proof-visual,
+    .photo-guide-visual {
+      position: relative;
+      min-height: clamp(480px, 50vw, 680px);
+      overflow: hidden;
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 80% 16%, rgba(232,195,125,.24), transparent 28%),
+        linear-gradient(180deg, #16241f, #07100d);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 34px 100px rgba(21,17,12,.12);
+    }
+    .proof-phone {
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 9%;
+      bottom: 9%;
+      display: grid;
+      align-content: center;
+      gap: 16px;
+      padding: 22px;
+      border-radius: 34px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 30px 80px rgba(0,0,0,.26);
+    }
+    .phone-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255,255,255,.72);
+      font-size: .82rem;
+      font-weight: 900;
+    }
+    .phone-shot {
+      min-height: 86px;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 14px;
+      border-radius: 22px;
+      color: #fff;
+      background: rgba(5,8,7,.72);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .phone-shot i {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.14) 0 1px, transparent 1px 20%),
+        rgba(232,195,125,.18);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    .phone-shot b {
+      color: #e8c37d;
+      font-size: .86rem;
+      font-weight: 950;
+    }
+    .phone-shot span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255,255,255,.72);
+      font-size: .86rem;
+      font-weight: 760;
+      line-height: 1.35;
+    }
+    .proof-cards {
+      display: grid;
+      gap: 16px;
+    }
+    .proof-cards article {
+      padding: clamp(22px, 3vw, 32px);
+      border-radius: 28px;
+      background: rgba(255,255,255,.52);
+      border: 1px solid rgba(23,23,19,.1);
+      box-shadow: 0 22px 70px rgba(21,17,12,.06);
+    }
+    .proof-cards b {
+      color: var(--moss);
+      font-size: .82rem;
+      font-weight: 950;
+    }
+    .proof-cards h3 {
+      margin-top: 12px;
+      font-size: clamp(1.28rem, 2vw, 1.8rem);
+    }
+    .proof-cards p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-weight: 720;
+    }
+    .proof-system.mood-system {
+      grid-template-columns: minmax(360px, .56fr) minmax(0, .44fr);
+      align-items: stretch;
+    }
+    .mood-board img {
+      height: clamp(520px, 48vw, 700px);
+      object-fit: cover;
+    }
+    .mood-board::after {
+      background:
+        linear-gradient(180deg, transparent 42%, rgba(3,5,4,.62)),
+        radial-gradient(circle at 18% 18%, rgba(232,195,125,.22), transparent 30%);
+    }
+    .mood-steps {
+      align-content: center;
+      gap: 0;
+      border-top: 1px solid rgba(23,23,19,.14);
+    }
+    .mood-steps article {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 20px;
+      align-items: start;
+      padding: clamp(24px, 3vw, 34px) 0;
+      border-bottom: 1px solid rgba(23,23,19,.14);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .mood-steps article::before {
+      content: attr(data-step);
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #171713;
+      background: #f0cf82;
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .mood-steps h3 {
+      margin-top: 6px;
+      font-size: clamp(1.34rem, 2vw, 1.92rem);
+      line-height: 1.18;
+    }
+    .photo-visual.mood-visual {
+      border-radius: 34px;
+      border: 1px solid rgba(255,255,255,.16);
+    }
+    .photo-visual.mood-visual img {
+      height: clamp(520px, 46vw, 660px);
+      object-fit: cover;
+    }
+    .photo-cta.mood-photo-cta {
+      grid-template-columns: minmax(360px, .52fr) minmax(0, .48fr);
+    }
+    .photo-cta.mood-photo-cta .shot-list {
+      border-top-color: rgba(255,255,255,.16);
+    }
+    .photo-cta.mood-photo-cta .shot-list div {
+      border-bottom-color: rgba(255,255,255,.16);
+    }
+
+    .faq {
+      max-width: 980px;
+      margin: 48px auto 0;
+      border-top: 1px solid var(--line);
+    }
+    .faq details {
+      border-bottom: 1px solid var(--line);
+    }
+    .faq summary {
+      cursor: pointer;
+      padding: 25px 0;
+      font-weight: 950;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq p {
+      max-width: 760px;
+      padding: 0 0 28px;
+      color: var(--muted);
+      font-weight: 680;
+    }
+
+    .photo-cta {
+      display: grid;
+      grid-template-columns: minmax(270px, .38fr) minmax(0, .62fr);
+      gap: clamp(36px, 8vw, 110px);
+      align-items: center;
+    }
+    .photo-visual {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+    }
+    .photo-visual img {
+      height: 560px;
+      object-fit: cover;
+    }
+    .photo-guide-visual {
+      min-height: 560px;
+      border-radius: 28px;
+      box-shadow: none;
+    }
+    .photo-guide-visual .proof-phone {
+      left: 9%;
+      right: 9%;
+    }
+    .shot-list {
+      max-width: 680px;
+      margin-top: 34px;
+      border-top: 1px solid var(--light-line);
+    }
+    .shot-list div {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--light-line);
+    }
+    .shot-list b {
+      color: #e8c37d;
+      font-size: .84rem;
+      font-weight: 950;
+    }
+    .shot-list span {
+      color: rgba(255,255,255,.78);
+      font-weight: 680;
+    }
+
+    .final {
+      min-height: 92svh;
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: center;
+      color: #fff;
+      background: #111;
+      overflow: hidden;
+    }
+    .final img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      height: 100%;
+      object-fit: cover;
+    }
+    .final-visual {
+      position: absolute;
+      inset: auto 7% 7% auto;
+      z-index: -1;
+      width: min(46vw, 640px);
+      aspect-ratio: 1.45;
+      opacity: .72;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 76% 28%, rgba(232,195,125,.34), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.03)),
+        #14201b;
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 40px 140px rgba(0,0,0,.34);
+      overflow: hidden;
+    }
+    .final-visual .answer-window {
+      left: 12%;
+      top: 17%;
+      width: 48%;
+      height: 58%;
+    }
+    .final::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(13,18,15,.9), rgba(13,18,15,.5) 58%, rgba(13,18,15,.12)),
+        linear-gradient(180deg, rgba(13,18,15,.1), rgba(13,18,15,.78));
+    }
+    .final.mood-final img {
+      object-position: center;
+    }
+    .final.mood-final::after {
+      background:
+        linear-gradient(90deg, rgba(8,10,9,.96), rgba(8,10,9,.64) 46%, rgba(8,10,9,.12)),
+        linear-gradient(180deg, rgba(8,10,9,.12), rgba(8,10,9,.72));
+    }
+    .final-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 720px;
+      margin-top: 34px;
+    }
+    .final-proof span {
+      min-height: 74px;
+      display: grid;
+      align-content: center;
+      padding: 16px 18px;
+      border-radius: 20px;
+      color: rgba(255,255,255,.86);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(16px);
+      font-size: .92rem;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+    .final h2 { max-width: 820px; color: #fff; }
+    .final .lead {
+      max-width: 610px;
+      margin-top: 24px;
+    }
+
+    .sticky {
+      position: fixed;
+      z-index: 90;
+      right: 18px;
+      bottom: 16px;
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid rgba(23,23,19,.1);
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 18px 56px rgba(18,15,10,.14);
+      backdrop-filter: blur(18px);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    .sticky.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .sticky a {
+      min-height: 42px;
+      min-width: 128px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: .88rem;
+      font-weight: 950;
+    }
+    .sticky a:first-child { color: #fff; background: var(--moss); }
+    .sticky a:last-child { color: var(--ink); border: 1px solid rgba(23,23,19,.14); background: #fff; }
+
+    [data-reveal] {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero [data-reveal] {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 1020px) {
+      .nav-links { display: none; }
+      .cinema-scroll {
+        min-height: 300svh;
+      }
+      .cinema-sticky {
+        align-items: start;
+        padding-top: 78px;
+      }
+      .cinema-layout {
+        grid-template-columns: 1fr;
+      }
+      .cinema-copy h1 {
+        max-width: 720px;
+        font-size: clamp(3rem, 8vw, 4.5rem);
+      }
+      .cinema-stage {
+        min-height: 560px;
+      }
+      .cinema-panel {
+        grid-template-columns: 1fr;
+      }
+      .cinema-metrics {
+        width: min(360px, 100%);
+      }
+      .visual-head h2 {
+        max-width: 760px;
+        font-size: 4rem;
+      }
+      .visual-copy h3 {
+        font-size: 3rem;
+      }
+      .film-grid,
+      .statement-inner,
+      .editorial-grid,
+      .moments-layout,
+      .day-night,
+      .diagnosis-intro,
+      .compare-layout,
+      .risk-layout,
+      .method,
+      .advisor,
+      .case-layout,
+      .gallery,
+      .proof-system,
+      .photo-cta {
+        grid-template-columns: 1fr;
+      }
+      .solution-mood,
+      .solution-story-item,
+      .solution-story-item:nth-child(even),
+      .proof-system.mood-system,
+      .photo-cta.mood-photo-cta {
+        grid-template-columns: 1fr;
+      }
+      .solution-story-item:nth-child(even) .solution-story-image {
+        order: 0;
+      }
+      .method-head { position: static; }
+      .diagnosis-grid,
+      .decision-board,
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+      .decision-card:nth-child(2),
+      .decision-card:nth-child(3) {
+        margin-top: 0;
+      }
+      .lens-item {
+        grid-template-columns: 1fr;
+      }
+      .trust-note {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        height: 56px;
+        padding: 0 16px;
+      }
+      .brand span { display: none; }
+      .wrap, .wide { width: min(100% - 30px, var(--content)); }
+      .section { padding: 76px 0; }
+      .cinema-scroll {
+        min-height: 285svh;
+      }
+      .cinema-sticky {
+        min-height: 100svh;
+        padding: 70px 0 42px;
+      }
+      .cinema-layout {
+        width: min(100% - 30px, 520px);
+        gap: 24px;
+      }
+      .cinema-kicker {
+        font-size: .78rem;
+      }
+      .cinema-kicker::before {
+        width: 34px;
+      }
+      .cinema-copy h1 {
+        max-width: 350px;
+        font-size: 2.72rem;
+        line-height: 1.02;
+      }
+      .cinema-copy .lead {
+        max-width: 342px;
+        margin-top: 18px;
+        font-size: .96rem;
+        line-height: 1.7;
+      }
+      .cinema-steps {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 20px;
+        font-size: .82rem;
+      }
+      .cinema-steps span {
+        grid-template-columns: 30px 1fr;
+      }
+      .cinema-steps b {
+        width: 30px;
+        height: 30px;
+      }
+      .cinema-stage {
+        min-height: 430px;
+        border-radius: 18px;
+      }
+      .cinema-panel {
+        left: 16px;
+        right: 16px;
+        bottom: 18px;
+        gap: 14px;
+      }
+      .cinema-panel h2 {
+        max-width: 286px;
+        font-size: 2rem;
+        line-height: 1.04;
+        overflow-wrap: anywhere !important;
+        word-break: break-all !important;
+      }
+      .cinema-panel p {
+        max-width: 298px;
+        margin-top: 12px;
+        font-size: .9rem;
+        line-height: 1.58;
+      }
+      .cinema-metrics {
+        display: none;
+      }
+      .cinema-progress {
+        width: calc(100% - 48px);
+        bottom: 12px;
+      }
+      .hero {
+        min-height: auto;
+        padding: 78px 0 48px;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .visual-head {
+        text-align: left;
+        justify-items: start;
+      }
+      .visual-showcase.hero-stage {
+        min-height: auto;
+        padding: 76px 0 52px;
+      }
+      .visual-head .btn-row {
+        justify-content: flex-start;
+      }
+      .visual-head h2 {
+        max-width: 342px;
+        margin-top: 16px;
+        font-size: 2.48rem;
+        line-height: 1.03;
+        overflow-wrap: normal !important;
+        word-break: keep-all !important;
+        line-break: strict;
+      }
+      .visual-head .lead {
+        max-width: 342px;
+        margin-top: 18px;
+        font-size: .98rem;
+        line-height: 1.72;
+      }
+      .visual-head .btn-row {
+        width: 100%;
+        max-width: 342px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 24px;
+      }
+      .visual-head .btn {
+        width: 100%;
+        min-height: 46px;
+        padding: 12px 14px;
+        font-size: .86rem;
+      }
+      .desktop-break { display: none; }
+      .mobile-break { display: block; }
+      .showcase-shell {
+        width: calc(100vw - 40px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4px;
+      }
+      .showcase-window {
+        border-radius: 16px;
+      }
+      .visual-slide {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 14px;
+      }
+      .visual-frame {
+        min-height: auto;
+      }
+      .visual-photo {
+        border-radius: 14px;
+      }
+      .visual-photo img {
+        height: 328px;
+        min-height: 0;
+      }
+      .commercial-art {
+        min-height: 264px;
+        border-radius: 16px;
+      }
+      .commercial-art img {
+        min-height: 264px;
+        height: 264px;
+      }
+      .commercial-pin {
+        padding: 8px 10px;
+        font-size: .72rem;
+      }
+      .commercial-pin.p1 {
+        left: 14px;
+        top: 14px;
+      }
+      .commercial-pin.p2 {
+        right: 14px;
+        top: 14px;
+      }
+      .commercial-pin.p3 {
+        right: 14px;
+        bottom: 76px;
+      }
+      .commercial-mark {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        gap: 8px;
+      }
+      .commercial-mark span {
+        min-height: 30px;
+        padding: 6px 9px;
+        font-size: .72rem;
+      }
+      .hero-stage .visual-photo img {
+        height: 328px;
+        min-height: 0;
+      }
+      .motion-card {
+        display: none;
+      }
+      .motion-card.right,
+      .motion-line {
+        display: none;
+      }
+      .visual-copy {
+        padding: 4px 2px 6px;
+      }
+      .visual-copy h3 {
+        font-size: 1.74rem;
+        line-height: 1.14;
+      }
+      .visual-copy p {
+        max-width: 100%;
+        margin-top: 10px;
+        font-size: .86rem;
+        line-height: 1.62;
+      }
+      .visual-badges {
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .visual-badges span {
+        min-height: 30px;
+        padding: 6px 10px;
+        font-size: .72rem;
+      }
+      .hero-proof {
+        display: grid;
+        gap: 10px;
+        margin-top: 26px;
+      }
+      .hero-copy .lead {
+        max-width: 330px;
+      }
+      h1 {
+        max-width: 350px;
+        font-size: clamp(1.88rem, 8.2vw, 2.28rem);
+        line-height: 1.07;
+      }
+      h2 {
+        font-size: clamp(1.54rem, 6.7vw, 1.92rem);
+        line-height: 1.12;
+      }
+      h1, h2, h3, .lead, p {
+        min-width: 0;
+        max-width: 100%;
+        white-space: normal;
+        text-wrap: wrap !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-all !important;
+        line-break: anywhere;
+      }
+      .hero-visual {
+        justify-self: stretch;
+        width: 100%;
+        margin-top: 28px;
+        margin-bottom: 0;
+      }
+      .hero-visual img {
+        height: 330px;
+      }
+      .hero-visual figcaption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 14px 16px;
+        font-size: .84rem;
+        line-height: 1.42;
+      }
+      .problem-deck {
+        grid-template-columns: 1fr;
+        margin-top: 42px;
+      }
+      .problem-card,
+      .problem-card:nth-child(2),
+      .problem-card:nth-child(3) {
+        min-height: auto;
+        margin-top: 0;
+        padding: 24px;
+      }
+      .choice-row:nth-child(2),
+      .choice-row:nth-child(3) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .reel { width: min(304px, 100%); }
+      .dn-stage {
+        min-height: 560px;
+      }
+      .mode-tabs {
+        top: 14px;
+        left: 14px;
+      }
+      .mode-tabs button {
+        min-height: 34px;
+        padding: 7px 14px;
+        font-size: .84rem;
+      }
+      .dn-panel {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 18px;
+      }
+      .diagnosis-card,
+      .decision-card,
+      .solution-card {
+        min-height: auto;
+        border-radius: 22px;
+      }
+      .diagnosis-card {
+        padding: 18px;
+      }
+      .diagnosis-intro .lead {
+        margin-top: 18px;
+      }
+      .scene-diagram {
+        min-height: 250px;
+        border-radius: 18px;
+      }
+      .scene-note {
+        min-height: 26px;
+        padding: 6px 8px;
+        font-size: .68rem;
+      }
+      .scene-caption {
+        left: 8%;
+        right: 8%;
+        bottom: 5%;
+        padding: 9px 10px;
+        font-size: .74rem;
+      }
+      .scene-window {
+        left: 9%;
+        width: 56%;
+      }
+      .scene-building {
+        right: 6%;
+        width: 24%;
+      }
+      .visual-diagram {
+        height: 390px;
+        min-height: 390px;
+        border-radius: 22px;
+      }
+      .visual-diagram .answer-label,
+      .compare-scene .answer-label {
+        font-size: .68rem;
+      }
+      .compare-stage {
+        min-height: 540px;
+        border-radius: 22px;
+      }
+      .compare-layer .compare-label {
+        left: 14px;
+        top: 14px;
+        max-width: 154px;
+        padding: 9px 10px;
+        border-radius: 14px;
+      }
+      .compare-layer.night .compare-label {
+        left: auto;
+        right: 14px;
+      }
+      .compare-layer .compare-label span {
+        font-size: .78rem;
+        line-height: 1.32;
+      }
+      .compare-layer .compare-label b {
+        font-size: .68rem;
+      }
+      .compare-facts div {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .split-handle::before {
+        bottom: 24px;
+        font-size: .78rem;
+      }
+      .compare-range {
+        left: 18px;
+        right: 18px;
+        bottom: 78px;
+        width: calc(100% - 36px);
+      }
+      .compare-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        font-size: .78rem;
+      }
+      .risk-card {
+        min-height: auto;
+        padding: 78px 20px 22px;
+        border-radius: 22px;
+      }
+      .risk-card::before {
+        left: 20px;
+        top: 20px;
+      }
+      .solution-card {
+        grid-template-rows: 300px auto;
+      }
+      .solution-mood {
+        margin-top: 34px;
+        gap: 24px;
+      }
+      .solution-mood-copy {
+        padding-bottom: 0;
+      }
+      .solution-mood-copy h3,
+      .solution-story-copy h3 {
+        font-size: 2.08rem;
+        line-height: 1.08;
+      }
+      .solution-ambient,
+      .mood-visual {
+        border-radius: 22px;
+      }
+      .solution-ambient img,
+      .mood-visual img,
+      .mood-board img,
+      .photo-visual.mood-visual img {
+        height: 390px;
+      }
+      .mood-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+      .mood-caption span {
+        min-height: 30px;
+        padding: 6px 9px;
+        font-size: .7rem;
+      }
+      .solution-story {
+        margin-top: 34px;
+        gap: 30px;
+      }
+      .solution-story-item {
+        min-height: auto;
+        gap: 18px;
+        padding: 0 0 30px;
+      }
+      .solution-story-image {
+        min-height: 286px;
+        border-radius: 22px;
+      }
+      .solution-story-copy p,
+      .solution-mood-copy p {
+        font-size: .92rem;
+        line-height: 1.72;
+      }
+      .solution-story-points span {
+        font-size: .72rem;
+      }
+      .solution-image {
+        min-height: 300px;
+      }
+      .solution-image img {
+        height: 300px;
+      }
+      .answer-window {
+        left: 8%;
+        width: 50%;
+        border-radius: 18px;
+      }
+      .answer-slats {
+        inset: 20px 14px 14px;
+        gap: 5px;
+      }
+      .answer-sun {
+        right: 12%;
+        width: 54px;
+        height: 54px;
+      }
+      .answer-label {
+        min-height: 28px;
+        padding: 6px 9px;
+        font-size: .68rem;
+      }
+      .solution-layered .answer-window.day,
+      .solution-layered .answer-window.night {
+        width: 39%;
+      }
+      .proof-visual,
+      .photo-guide-visual,
+      .proof-photo,
+      .proof-phone,
+      .proof-cards article {
+        border-radius: 22px;
+      }
+      .proof-visual,
+      .photo-guide-visual {
+        min-height: 480px;
+      }
+      .mood-steps article {
+        grid-template-columns: 54px 1fr;
+        gap: 14px;
+        padding: 22px 0;
+      }
+      .mood-steps article::before {
+        width: 44px;
+        height: 44px;
+        font-size: .72rem;
+      }
+      .mood-steps h3 {
+        font-size: 1.34rem;
+      }
+      .proof-phone {
+        left: 8%;
+        right: 8%;
+        padding: 16px;
+      }
+      .phone-shot {
+        grid-template-columns: 44px 1fr;
+        min-height: 74px;
+        padding: 12px;
+      }
+      .phone-shot i {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+      }
+      .proof-photo img {
+        height: 390px;
+      }
+      .case-pin {
+        position: static;
+        max-width: none;
+        margin: 10px 12px 0;
+        color: var(--ink);
+        background: rgba(255,255,255,.92);
+      }
+      .statement { min-height: auto; }
+      .choice-row,
+      .shot-list div {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .mosaic {
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+      }
+      .mosaic figure,
+      .mosaic figure:nth-child(1),
+      .mosaic figure:nth-child(2),
+      .mosaic figure:nth-child(3) {
+        position: static;
+        width: auto;
+        height: auto;
+      }
+      .mosaic figure:nth-child(2),
+      .mosaic figure:nth-child(3) {
+        display: none;
+      }
+      .mosaic img {
+        height: 390px;
+      }
+      .image-story {
+        min-height: auto;
+        display: block;
+      }
+      .image-story img {
+        position: static;
+        height: 420px;
+        object-fit: cover;
+      }
+      .image-story::after {
+        display: none;
+      }
+      .image-story .wrap {
+        padding: 46px 0 72px;
+      }
+      .editorial-media img,
+      .case-layout img,
+      .photo-visual img {
+        height: 410px;
+      }
+      .lens-item {
+        padding: 0;
+        background: transparent;
+      }
+      .lens-media img {
+        height: 260px;
+      }
+      .method-item {
+        min-height: auto;
+        padding: 34px 0;
+      }
+      .gallery-main img,
+      .gallery-side img {
+        height: 360px;
+      }
+      .journey article {
+        grid-template-columns: 72px 1fr;
+        gap: 18px;
+      }
+      .journey article::before {
+        left: 35px;
+      }
+      .journey b {
+        width: 70px;
+        height: 70px;
+        font-size: .78rem;
+      }
+      .bubble {
+        max-width: 88%;
+      }
+      .chat-photo {
+        width: 88%;
+      }
+      .final-visual {
+        display: none;
+      }
+      .final-proof {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 26px;
+      }
+      .final-proof span {
+        min-height: 58px;
+        padding: 13px 15px;
+        border-radius: 16px;
+        font-size: .84rem;
+      }
+      #photos .btn-row {
+        display: none;
+      }
+      #contact .btn-row {
+        margin-bottom: 88px;
+      }
+      .trust-note div {
+        min-height: auto;
+      }
+      .sticky {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        border-radius: 18px;
+      }
+      .sticky a { flex: 1; min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="主選單">
+    <a class="brand" href="#top">沐馨窗簾設計<span>大面窗光感與隱私判斷</span></a>
+    <div class="nav-links">
+      <a href="#cinema">光感</a>
+      <a href="#problem">痛點</a>
+      <a href="#visual">展示</a>
+      <a href="#method">方法</a>
+      <a href="#choice">適合</a>
+      <a href="#case">案例</a>
+      <a href="#process">流程</a>
+      <a href="#photos">傳照片</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section id="cinema" class="cinema-scroll" data-cinema aria-label="大面窗光感判斷動畫">
+      <div class="cinema-sticky">
+        <div class="cinema-layout">
+          <div class="cinema-copy">
+            <span class="cinema-kicker">新成屋大面窗客廳</span>
+            <h1>你要買的不是窗簾，<br>是每天回家的舒服。</h1>
+            <p class="lead">大面窗很美，但只要光線太硬、晚上沒隱私、比例不對，客廳每天都會被扣分。直立柔紗簾可以很漂亮，前提是它真的適合你家。</p>
+            <div class="cinema-steps" aria-label="光感判斷三步驟">
+              <span class="is-active" data-cinema-step="0"><b>01</b>先找出最困擾你的時段</span>
+              <span data-cinema-step="1"><b>02</b>再分清楚是光線、視線，還是比例</span>
+              <span data-cinema-step="2"><b>03</b>最後才決定柔紗、遮光或搭配</span>
+            </div>
+          </div>
+
+          <div class="cinema-stage" aria-live="polite">
+            <figure class="cinema-photo cinema-day">
+              <img src="generated-assets/v32-ai-vertical-sheer/day-living-vertical-sheer.png" alt="白天大面窗直立柔紗簾自然光進入客廳">
+            </figure>
+            <figure class="cinema-photo cinema-night">
+              <img src="generated-assets/v32-ai-vertical-sheer/night-privacy-vertical-sheer.png" alt="晚上客廳直立柔紗簾開燈後的隱私視線">
+            </figure>
+            <div class="cinema-glare" aria-hidden="true"></div>
+            <div class="cinema-curtain" aria-hidden="true"></div>
+            <div class="cinema-sight" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="cinema-panel">
+              <div>
+                <span class="cinema-kicker" id="cinema-kicker">白天坐不住</span>
+                <h2 id="cinema-title">光很好，卻讓客廳不好坐。</h2>
+                <p id="cinema-copy">很多人喜歡大面窗，是因為它亮。但真正住進去後，刺眼、反光、西曬，才是每天會遇到的問題。</p>
+              </div>
+              <div class="cinema-metrics" aria-label="目前判斷重點">
+                <span>光線 <b id="cinema-metric-a">偏硬</b></span>
+                <span>隱私 <b id="cinema-metric-b">白天低</b></span>
+                <span>建議 <b id="cinema-metric-c">先柔光</b></span>
+              </div>
+            </div>
+            <div class="cinema-progress" aria-hidden="true"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual" class="visual-showcase hero-stage" aria-label="動態視覺判斷圖卡">
+      <div class="wrap visual-head" data-reveal>
+        <span class="eyebrow">沐馨窗簾設計｜大面窗銷售頁 v39</span>
+        <h2><span class="gradient-text">客廳美不美，</span><br class="mobile-break">常常不是裝潢輸了，<br class="mobile-break">是光線沒處理好。</h2>
+        <p class="lead">白天要通透，晚上要安心，窗簾還不能破壞裝潢比例。同一扇大面窗，其實同時在解三個問題。</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#problem" data-track="hero_problem">看我家是哪種問題</a>
+          <a class="btn btn-ghost" href="#photos" data-track="hero_line">先拍照片問方向</a>
+        </div>
+      </div>
+      <div class="showcase-shell" data-reveal>
+        <div class="showcase-window">
+          <div class="showcase-track">
+            <article class="visual-slide is-active">
+              <div class="visual-frame">
+                <figure class="commercial-art soft">
+                  <img src="generated-assets/v37-commercial-images/day-soft-living.png" alt="白天客廳大面窗直立柔紗簾柔化自然光">
+                  <span class="commercial-pin p1">白天留光</span>
+                  <span class="commercial-pin p3">降低反光</span>
+                  <figcaption class="commercial-mark">
+                    <span>柔光答案</span><span>自然光保留</span><span>客廳不壓暗</span>
+                  </figcaption>
+                </figure>
+                <span class="motion-line one"></span>
+                <div class="motion-card left">
+                  <b>DAYLIGHT</b>
+                  <span>把刺眼變柔，把明亮留下來。</span>
+                </div>
+                <div class="motion-card right">
+                  <b>CHECK</b>
+                  <span>刺眼、反光、西曬，不是同一題。</span>
+                </div>
+              </div>
+              <div class="visual-copy">
+                <h3>白天漂亮的光，<br>也可能讓客廳坐不住。</h3>
+                <p>你想保留的是明亮，不是讓眼睛每天忍耐。好的柔光處理，是讓客廳還是亮，但少掉反光、刺眼和壓迫感。</p>
+                <div class="visual-badges">
+                  <span>自然光</span><span>電視反光</span><span>西曬</span>
+                </div>
+              </div>
+            </article>
+            <article class="visual-slide">
+              <div class="visual-frame">
+                <figure class="commercial-art privacy">
+                  <img src="generated-assets/v37-commercial-images/night-privacy-living.png" alt="晚上客廳開燈後直立柔紗簾與外部視線隱私">
+                  <span class="commercial-pin p1">室內開燈</span>
+                  <span class="commercial-pin p2">外部視線</span>
+                  <figcaption class="commercial-mark">
+                    <span>遮光答案</span><span>樓距角度</span><span>晚上安心</span>
+                  </figcaption>
+                </figure>
+                <span class="motion-line two"></span>
+                <div class="motion-card left">
+                  <b>NIGHT</b>
+                  <span>晚上真正要處理的是安全感。</span>
+                </div>
+                <div class="motion-card right">
+                  <b>CHECK</b>
+                  <span>樓距、角度、活動區都要看。</span>
+                </div>
+              </div>
+              <div class="visual-copy">
+                <h3>晚上不是厚不厚，<br>是外面看不看得到。</h3>
+                <p>白天漂亮的透光，到晚上不一定安心。室內燈一亮，對面樓層、窗戶角度和活動區位置，才會決定你需不需要更強的遮蔽。</p>
+                <div class="visual-badges">
+                  <span>樓距</span><span>視線角度</span><span>室內燈</span>
+                </div>
+              </div>
+            </article>
+            <article class="visual-slide">
+              <div class="visual-frame">
+                <figure class="commercial-art layered">
+                  <img src="generated-assets/v37-commercial-images/day-night-layered-solution.png" alt="大面窗直立柔紗簾搭配側邊遮光層的日夜解法">
+                  <span class="commercial-pin p1">白天柔紗</span>
+                  <span class="commercial-pin p2">側邊遮光層</span>
+                  <figcaption class="commercial-mark">
+                    <span>搭配答案</span><span>同一窗不同時段</span><span>不硬推單一款式</span>
+                  </figcaption>
+                </figure>
+                <span class="motion-line one"></span>
+                <div class="motion-card left">
+                  <b>SPACE</b>
+                  <span>不適合的窗，漂亮也不能硬做。</span>
+                </div>
+                <div class="motion-card right">
+                  <b>CHECK</b>
+                  <span>窗型、用途、預算一起看。</span>
+                </div>
+              </div>
+              <div class="visual-copy">
+                <h3>不適合直立柔紗簾的家，<br>硬做會變成遺憾。</h3>
+                <p>如果你最在意的是全遮光、夜間隱私或窗邊收納，答案可能不是單做柔紗。先把不適合排除，才是真的替你省錢。</p>
+                <div class="visual-badges">
+                  <span>不硬推</span><span>窗型判斷</span><span>替代做法</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="showcase-controls" aria-label="視覺圖卡控制">
+          <div class="visual-dots">
+            <button type="button" class="is-active" aria-label="白天柔光" data-visual-slide="0"></button>
+            <button type="button" aria-label="晚上隱私" data-visual-slide="1"></button>
+            <button type="button" aria-label="空間比例" data-visual-slide="2"></button>
+          </div>
+          <button type="button" class="visual-pause" aria-label="暫停或播放圖卡">Ⅱ</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap film-grid">
+        <div class="film-copy" data-reveal>
+          <span class="eyebrow">從廣告進來，你可能正在想這件事</span>
+          <h2>我家大面窗，<br>到底適合柔紗，<br>還是該做遮光？</h2>
+          <p class="lead">短影音讓你先看到問題，但真正要下決定，不能只靠一個漂亮畫面。這頁會把白天、晚上、比例三件事拆開說清楚。</p>
+        </div>
+        <figure class="reel" data-reveal>
+          <div class="reel-frame">
+            <video
+              src="https://res.cloudinary.com/dfowanhou/video/upload/v1779195011/756cf6ea984e499a8b440d35d9986719_yq3hhe.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              preload="metadata"
+              data-video-track="cloudinary_short_video_001"
+              aria-label="大面窗隱私痛點短影音">
+            </video>
+            <figcaption class="reel-caption">看完影片，先問自己：我最怕的是刺眼、被看見，還是裝完不好看。</figcaption>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="problem" class="section paper statement">
+      <div class="wrap statement-inner" data-reveal>
+        <div>
+          <span class="eyebrow">客人的真正痛點</span>
+          <h2>你擔心的不是窗簾款式，<br>是花了錢，客廳還是不舒服。</h2>
+        </div>
+        <p class="lead">很多人下訂前問的是品牌、價格、遮光率；完工後每天感受到的卻是光、視線和比例。這三件沒有對，窗簾再美也會扣分。</p>
+      </div>
+      <div class="wrap problem-deck" data-reveal>
+        <article class="problem-card">
+          <b>痛點 01 / 白天</b>
+          <h3>白天太亮不是問題，坐下來刺眼才是問題。</h3>
+          <p>電視反光、地板反射、西曬刺眼，會讓你開始想拉簾，結果新家的開闊感也一起被關掉。</p>
+        </article>
+        <article class="problem-card">
+          <b>痛點 02 / 晚上</b>
+          <h3>晚上開燈後，你才知道隱私不是白天看得出來。</h3>
+          <p>室內變亮、外面變暗，客廳活動區就可能被看見。這不是布厚不厚而已，是視線條件。</p>
+        </article>
+        <article class="problem-card">
+          <b>痛點 03 / 完工後</b>
+          <h3>窗簾面積太大，做錯就是客廳主視覺。</h3>
+          <p>顏色重一點、線條亂一點、收邊差一點，都會被放大。大面窗不能只用「哪個比較遮」決定。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="diagnosis" class="section diagnosis-lab">
+      <div class="wrap diagnosis-intro" data-reveal>
+        <div>
+          <span class="eyebrow">先把問題分型</span>
+          <h2>同樣是大面窗，卡住的點可能完全不同。</h2>
+        </div>
+        <p class="lead">如果只說「直立柔紗簾很美」，說服力會很弱。客人真正需要的是知道：我家到底是刺眼型、視線型，還是比例型。</p>
+      </div>
+      <div class="wrap diagnosis-grid" data-reveal>
+        <article class="diagnosis-card">
+          <div class="scene-diagram scene-glare" aria-hidden="true">
+            <div class="scene-window">
+              <div class="scene-curtain"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="scene-sun"></span>
+            <span class="scene-ray r1"></span><span class="scene-ray r2"></span><span class="scene-ray r3"></span>
+            <span class="scene-sofa"></span><span class="scene-table"></span><span class="scene-tv"></span>
+            <span class="scene-note gold n1">西曬光線</span>
+            <span class="scene-note gold n2">電視反光</span>
+            <span class="scene-note n3">沙發刺眼</span>
+          </div>
+          <div class="diagnosis-copy">
+            <b>白天刺眼型</b>
+            <h3>白天想留光，但眼睛和電視先受不了。</h3>
+            <p>這種家不一定需要變暗，而是要把光變柔。方向選錯，就會把原本漂亮的採光一起犧牲掉。</p>
+            <div class="mini-meter" aria-hidden="true"><span style="--w:82%"></span><span style="--w:46%"></span></div>
+          </div>
+        </article>
+        <article class="diagnosis-card">
+          <div class="scene-diagram scene-privacy" aria-hidden="true">
+            <div class="scene-window">
+              <div class="scene-curtain"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="scene-building"></span>
+            <span class="scene-sight s1"></span><span class="scene-sight s2"></span><span class="scene-sight s3"></span>
+            <span class="scene-sofa"></span><span class="scene-lamp"></span>
+            <span class="scene-note green n1">室內開燈</span>
+            <span class="scene-note green n2">對面樓視線</span>
+            <span class="scene-note n4">活動區靠窗</span>
+          </div>
+          <div class="diagnosis-copy">
+            <b>夜間視線型</b>
+            <h3>晚上才發現，家裡亮起來也等於被看見。</h3>
+            <p>這時候重點不是窗簾漂不漂亮，而是樓距、角度、活動區和室內燈光會不會讓你不自在。</p>
+            <div class="mini-meter" aria-hidden="true"><span style="--w:38%"></span><span style="--w:76%"></span></div>
+          </div>
+        </article>
+        <article class="diagnosis-card">
+          <div class="scene-diagram scene-proportion" aria-hidden="true">
+            <div class="scene-wall">
+              <div class="scene-window">
+                <div class="scene-curtain"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <span class="scene-measure m1"></span><span class="scene-measure m2"></span>
+            <span class="scene-sofa"></span><span class="scene-tv"></span>
+            <span class="scene-note blue n1">軌道收邊</span>
+            <span class="scene-note blue n2">窗高比例</span>
+            <span class="scene-note n3">家具位置</span>
+          </div>
+          <div class="diagnosis-copy">
+            <b>比例壓迫型</b>
+            <h3>窗面太大，一點點不對就像整面牆失手。</h3>
+            <p>窗高、軌道、收邊、家具位置，都會影響完成感。布料對了，比例不對，還是會看起來不精緻。</p>
+            <div class="mini-meter" aria-hidden="true"><span style="--w:64%"></span><span style="--w:91%"></span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="daynight" class="section compare-lab">
+      <div class="wrap compare-layout">
+        <div class="compare-copy" data-reveal>
+          <span class="eyebrow">日夜不是同一題</span>
+          <h2>白天的答案，不一定能解晚上。</h2>
+          <p class="lead">柔紗擅長把光變柔，但如果你晚上最怕被看見，就不能只看白天效果。先把兩個時段拆開，才不會買到一半對的答案。</p>
+          <div class="compare-facts">
+            <div><b>白天</b><span>要的是舒服的亮，不是把窗全部封住。</span></div>
+            <div><b>晚上</b><span>要的是視線退後，不是只看布料漂不漂亮。</span></div>
+            <div><b>分流</b><span>如果兩題都重，就要思考搭配，不要硬靠單一款式。</span></div>
+          </div>
+        </div>
+        <div class="compare-stage" data-reveal>
+          <div class="compare-layer day">
+            <img src="generated-assets/v37-commercial-images/day-soft-living.png" alt="白天大面窗直立柔紗簾柔光狀態">
+            <div class="compare-label"><b>DAY</b><span>留光，但把刺眼變柔。</span></div>
+          </div>
+          <div class="compare-layer night">
+            <img src="generated-assets/v37-commercial-images/night-privacy-living.png" alt="晚上室內開燈後大面窗直立柔紗簾隱私狀態">
+            <div class="compare-label"><b>NIGHT</b><span>開燈後，視線方向反過來。</span></div>
+          </div>
+          <div class="split-handle" aria-hidden="true"></div>
+          <input class="compare-range" type="range" min="18" max="82" value="52" aria-label="拖曳比較白天與晚上">
+          <div class="compare-caption"><span>白天：柔光</span><span>晚上：視線</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section risk-show">
+      <div class="wrap risk-layout">
+        <div class="risk-copy" data-reveal>
+          <span class="eyebrow">為什麼不能只問多少錢</span>
+          <h2>最貴的不是窗簾，<br>是裝完才發現每天都想重做。</h2>
+          <p class="lead">價格要比，但要在方向對之後比。方向錯了，便宜只是比較快買到一個不適合的結果。</p>
+        </div>
+        <div class="risk-stack" data-reveal>
+          <article class="risk-card" data-num="01">
+            <h3>為了遮而遮，客廳可能變暗、變重。</h3>
+            <p>明明買的是大面窗，最後卻每天像把自然光關掉。</p>
+          </article>
+          <article class="risk-card" data-num="02">
+            <h3>只看美照，容易忽略你家的條件不同。</h3>
+            <p>照片裡的樓距、窗型、天花、家具色，不一定等於你家。</p>
+          </article>
+          <article class="risk-card" data-num="03">
+            <h3>急著比價，常常比的是不同東西。</h3>
+            <p>材質、軌道、收邊、搭配方式不同，報價低不一定代表真正划算。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="section dark">
+      <div class="wrap method">
+        <div class="method-head" data-reveal>
+          <span class="eyebrow">沐馨怎麼判斷</span>
+          <h2>我們不是先推產品，而是先排除錯誤答案。</h2>
+          <p class="lead">真正有用的建議，不是馬上說哪款最好，而是先告訴你哪些做法可能不適合你家。</p>
+        </div>
+        <div class="method-list" data-reveal>
+          <article class="method-item">
+            <b>01 / 光線</b>
+            <h3>找出你最受不了的時段。</h3>
+            <p>早上、午後、晚上，問題不一樣。先抓準時段，才知道要處理光還是隱私。</p>
+          </article>
+          <article class="method-item">
+            <b>02 / 視線</b>
+            <h3>看外面可能從哪裡看進來。</h3>
+            <p>樓距、對面高度、窗戶角度和你常坐的位置，會決定晚上需不需要加強遮蔽。</p>
+          </article>
+          <article class="method-item">
+            <b>03 / 比例</b>
+            <h3>看窗簾收在哪、軌道怎麼藏。</h3>
+            <p>大面窗的完成感，常常輸在收邊、軌道和比例，不是輸在布料名稱。</p>
+          </article>
+          <article class="method-item">
+            <b>04 / 做法</b>
+            <h3>再選柔光、遮光，或日夜搭配。</h3>
+            <p>直立柔紗簾、遮光布、布簾或搭配做法都是工具，重點是解決你家的主要困擾。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="choice" class="section paper">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="eyebrow">適合與不適合，都要先講清楚</span>
+          <h2>直立柔紗簾很美，但它有適合條件。</h2>
+        </div>
+        <div class="decision-board" data-reveal>
+          <article class="decision-card">
+            <span class="decision-tag">適合優先看</span>
+            <h3>你想保留採光，也想讓窗面俐落乾淨。</h3>
+            <p>這類客廳通常很適合先看直立柔紗簾，因為它能讓光變柔，也能保留大面窗的高度感。</p>
+            <div class="decision-lines"><span>自然光需求高</span><span>不喜歡厚重布簾</span><span>客廳想要放大感</span></div>
+          </article>
+          <article class="decision-card warning">
+            <span class="decision-tag">要先評估</span>
+            <h3>你晚上很在意隱私，或對面樓距很近。</h3>
+            <p>這種不一定不能做，但要先看夜間視線。可能需要搭配遮光，或改用更適合的做法。</p>
+            <div class="decision-lines"><span>對面樓層近</span><span>客廳活動區靠窗</span><span>晚上安全感優先</span></div>
+          </article>
+          <article class="decision-card stop">
+            <span class="decision-tag">不硬推</span>
+            <h3>你只想全遮光，或窗邊條件不適合。</h3>
+            <p>如果主需求不是柔光，而是強遮蔽、隔熱或特殊窗型，就不該硬用同一種答案。</p>
+            <div class="decision-lines"><span>只想全遮光</span><span>窗邊收納不足</span><span>風格比例不適合</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section solution-wall">
+      <div class="wrap" data-reveal>
+        <span class="eyebrow">不要只買一個品名</span>
+        <h2>不是選一款窗簾，是幫客廳安排白天和晚上。</h2>
+        <p class="lead" style="max-width:680px;margin-top:22px">同一扇窗，白天需要柔和，晚上需要安心，整體還要融入裝潢。好的做法，是讓這三件事同時成立。</p>
+      </div>
+      <div class="wrap solution-mood" data-reveal>
+        <div class="solution-mood-copy">
+          <span class="eyebrow">材質、光、生活感一起看</span>
+          <h3>真正高級的窗簾，是沒有人覺得它突兀。</h3>
+          <p>它不應該搶走客廳，也不應該把新家的光壓掉。好的窗簾像是把空間調到剛好：白天舒服，晚上安心，視覺也安靜。</p>
+        </div>
+        <figure class="solution-ambient">
+          <img src="generated-assets/v39-mood-images/curtain-planning-atmosphere.png" alt="窗簾材質、光影與客廳氛圍">
+          <figcaption class="mood-caption">
+            <span>材質光影</span><span>空間氣氛</span><span>不是只看品名</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="wrap solution-story" data-reveal>
+        <article class="solution-story-item">
+          <figure class="solution-story-image">
+            <img src="generated-assets/v37-commercial-images/day-soft-living.png" alt="白天直立柔紗簾柔化大面窗自然光">
+            <figcaption class="mood-caption"><span>01 柔光</span><span>留住自然光</span></figcaption>
+          </figure>
+          <div class="solution-story-copy">
+            <b>柔光答案</b>
+            <h3>白天先讓光變柔，不是先把家變暗。</h3>
+            <p>大面窗真正迷人的地方是明亮感。若只是怕刺眼就做得很厚，客廳會失去原本的新屋感。柔光的任務，是把刺眼降下來，但把開闊留下來。</p>
+            <div class="solution-story-points"><span>自然光</span><span>反光降低</span><span>空間不壓暗</span></div>
+          </div>
+        </article>
+        <article class="solution-story-item">
+          <figure class="solution-story-image">
+            <img src="generated-assets/v37-commercial-images/night-privacy-living.png" alt="晚上大面窗直立柔紗簾與隱私視線">
+            <figcaption class="mood-caption"><span>02 遮光</span><span>晚上退視線</span></figcaption>
+          </figure>
+          <div class="solution-story-copy">
+            <b>遮光答案</b>
+            <h3>晚上要讓視線退後，不是只追求薄透漂亮。</h3>
+            <p>白天外面看不進來，不代表晚上也安心。室內燈一亮、外面變暗，視線會反過來。樓距近、活動區靠窗，就要把隱私放在美感前面。</p>
+            <div class="solution-story-points"><span>樓距</span><span>對面高度</span><span>室內燈光</span></div>
+          </div>
+        </article>
+        <article class="solution-story-item">
+          <figure class="solution-story-image">
+            <img src="generated-assets/v37-commercial-images/day-night-layered-solution.png" alt="直立柔紗簾搭配遮光層的日夜解法">
+            <figcaption class="mood-caption"><span>03 搭配</span><span>白天一套，晚上一套</span></figcaption>
+          </figure>
+          <div class="solution-story-copy">
+            <b>搭配答案</b>
+            <h3>一扇窗有兩種生活時段，就用兩套邏輯處理。</h3>
+            <p>客廳白天需要光，晚上需要安全感；兩個需求不一定能靠單一材質完成。搭配不是複雜化，而是讓不同時段各自舒服。</p>
+            <div class="solution-story-points"><span>日夜分工</span><span>不硬推單品</span><span>空間比例</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="case" class="section paper">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="eyebrow">案例不是只看漂不漂亮</span>
+          <h2>案例照不是用來炫耀，是用來看判斷有沒有對。</h2>
+        </div>
+        <div class="case-layout" data-reveal>
+          <figure class="annotated-case">
+            <img src="generated-assets/v32-ai-vertical-sheer/day-wide-vertical-sheer.png" alt="大面窗直立柔紗簾案例">
+            <span class="case-pin one">垂直線條保留大面窗高度，不讓窗面變厚重。</span>
+            <span class="case-pin two">白天光進來，但視覺變柔，不是把客廳變暗。</span>
+          </figure>
+          <div class="case-copy">
+            <span class="eyebrow">案例判斷</span>
+            <h3>同樣是漂亮大面窗，條件不同，答案就不同。</h3>
+            <p>這個空間需要的是保留明亮、降低刺眼，並讓窗面線條乾淨。如果換成樓距更近、夜間活動區靠窗，就不會只用同一個做法。</p>
+            <p>所以案例不是讓你照抄，而是讓你知道：好的推薦，必須回到你家的光、視線和比例。</p>
+          </div>
+        </div>
+        <div class="trust-note" data-reveal>
+          <div>
+            <b>會先講限制</b>
+            <p>不適合直立柔紗簾的條件，我們會先說清楚，不用話術硬推。</p>
+          </div>
+          <div>
+            <b>先用照片看方向</b>
+            <p>先看窗型、樓距、光線和家具位置，再決定是否需要到府丈量。</p>
+          </div>
+          <div>
+            <b>報價前先釐清做法</b>
+            <p>方向對了，價格才有比較基準；方向錯了，再便宜都會浪費。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="photo-proof" class="section warm">
+      <div class="wrap" data-reveal>
+        <span class="eyebrow">看細節，不看樣板答案</span>
+        <h2>你不用先懂窗簾，先讓我們看懂你家的條件。</h2>
+      </div>
+      <div class="wrap proof-system mood-system" data-reveal>
+        <figure class="proof-visual mood-visual mood-board">
+          <img src="generated-assets/v39-mood-images/three-photo-moodboard.png" alt="三張窗戶照片與布料樣本放在工作台上做窗簾規劃">
+          <figcaption class="mood-caption">
+            <span>用照片縮小方向</span>
+            <span>窗型</span>
+            <span>光線</span>
+            <span>比例</span>
+          </figcaption>
+        </figure>
+        <div class="proof-cards mood-steps">
+          <article data-step="01">
+            <div>
+              <b>窗戶正面</b>
+              <h3>看這扇窗，能不能做得漂亮。</h3>
+              <p>上方梁、軌道高度、左右收納空間，會影響直立柔紗簾裝起來是俐落，還是擠壓。</p>
+            </div>
+          </article>
+          <article data-step="02">
+            <div>
+              <b>客廳全景</b>
+              <h3>看整個客廳，窗簾會不會搶畫面。</h3>
+              <p>沙發、電視牆、餐桌、走道和天花比例，會決定窗簾是安靜的背景，還是突兀的一面牆。</p>
+            </div>
+          </article>
+          <article data-step="03">
+            <div>
+              <b>白天光線</b>
+              <h3>看你最困擾的光，是哪一種。</h3>
+              <p>刺眼、反光、太亮、怕被看見，解法不同。照片能先幫我們把問題分清楚。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section paper">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="eyebrow">接下來會怎麼走</span>
+          <h2>從傳照片到丈量，我們會把風險一段一段排掉。</h2>
+        </div>
+        <div class="journey" data-reveal>
+          <article>
+            <b>01</b>
+            <div>
+              <h3>你先傳照片，不用整理成專業資料。</h3>
+              <p>窗戶正面、客廳全景、白天光線。手機拍清楚就好，不用先量尺寸。</p>
+            </div>
+          </article>
+          <article>
+            <b>02</b>
+            <div>
+              <h3>我們回覆初步方向。</h3>
+              <p>適合直立柔紗簾、需要搭配遮光，或不建議硬做，會先讓你有概念。</p>
+            </div>
+          </article>
+          <article>
+            <b>03</b>
+            <div>
+              <h3>方向對了，再談預算範圍。</h3>
+              <p>先縮小做法，再看材質、軌道和搭配方式，價格才不會比錯。</p>
+            </div>
+          </article>
+          <article>
+            <b>04</b>
+            <div>
+              <h3>需要現場確認，再安排丈量。</h3>
+              <p>現場看軌道、收邊、開合方式、材質色溫和裝潢銜接。</p>
+            </div>
+          </article>
+          <article>
+            <b>05</b>
+            <div>
+              <h3>完工看的是整個客廳。</h3>
+              <p>不是只把窗簾掛上去，而是讓光線、隱私和空間比例一起成立。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section warm">
+      <div class="wrap advisor">
+        <div class="advisor-copy" data-reveal>
+          <span class="eyebrow">傳照片後，不是馬上推銷</span>
+          <h2>你先拿到的是判斷，不是被推銷的壓力。</h2>
+          <p class="lead">先知道你家大概適合什麼、哪些做法要小心、預算該花在哪裡。這樣你後面要不要丈量，都會比較有底。</p>
+        </div>
+        <div class="chat-card" data-reveal>
+          <div class="chat-top">
+            <b>沐馨窗簾設計</b>
+            <span>LINE 諮詢示意</span>
+          </div>
+          <div class="chat-body">
+            <div class="bubble user">您好，我家客廳下午很亮，晚上又擔心對面看進來，不知道能不能做直立柔紗簾。</div>
+            <figure class="chat-photo chat-upload" aria-hidden="true">
+              <span>窗戶正面</span>
+              <span>客廳全景</span>
+              <span>白天光線</span>
+            </figure>
+            <div class="bubble brand">可以，先不用選款式。你拍窗戶正面、客廳全景、白天最亮的時候給我們看。</div>
+            <div class="bubble brand">如果只做柔紗不夠，我們會先說；如果適合，再討論材質、軌道和預算。</div>
+            <div class="bubble user">好，那我先拍三張給你們判斷方向。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos" class="section dark">
+      <div class="wrap photo-cta mood-photo-cta">
+        <figure class="photo-visual mood-visual" data-reveal>
+          <img src="generated-assets/v39-mood-images/homeowner-phone-window.png" alt="屋主用手機拍攝客廳大面窗給窗簾設計師判斷">
+          <figcaption class="mood-caption">
+            <span>用手機先拍就好</span>
+            <span>窗型</span>
+            <span>客廳比例</span>
+            <span>白天光線</span>
+          </figcaption>
+        </figure>
+        <div data-reveal>
+          <span class="eyebrow">不用先約丈量</span>
+          <h2>拍這 3 張，我們就能先看出 70% 的方向。</h2>
+          <p class="lead" style="max-width:640px;margin-top:22px">你不用先懂材質，也不用先量尺寸。先讓我們看窗型、客廳比例和光線狀況，再告訴你大方向。</p>
+          <div class="shot-list">
+            <div><b>01 窗戶正面</b><span>看窗型、上方梁、軌道位置與左右收納。</span></div>
+            <div><b>02 客廳全景</b><span>看沙發、電視牆、動線和窗簾是否會搶畫面。</span></div>
+            <div><b>03 白天光線</b><span>看刺眼、反光、明暗落差，判斷是柔光還是遮光問題。</span></div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://line.me/R/ti/p/@moxin-curtain" data-track="photos_line">傳照片給 LINE</a>
+            <a class="btn btn-ghost" href="#faq" data-track="photos_faq">先看常見疑問</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section warm">
+      <div class="wrap" data-reveal style="text-align:center">
+        <span class="eyebrow">下單前，先把疑慮講清楚</span>
+        <h2>你可能真正擔心的是這些。</h2>
+      </div>
+      <div class="faq" data-reveal>
+        <details open>
+          <summary>直立柔紗簾晚上會不會被看見？</summary>
+          <p>不一定。要看樓距、對面高度、室內燈光、窗戶角度和活動區位置。如果夜間隱私很重，可能需要搭配遮光或改用其他做法。</p>
+        </details>
+        <details>
+          <summary>會不會讓新家的客廳變暗？</summary>
+          <p>如果方向是柔光，目標不是把客廳變暗，而是把刺眼和反光降下來。若你的需求是睡眠級遮光，就不該只用柔紗思考。</p>
+        </details>
+        <details>
+          <summary>我只想知道大概價格，可以先報嗎？</summary>
+          <p>可以抓方向，但不建議只用尺寸估價。窗型、軌道、收邊、材質和搭配方式都會影響價格；先看照片，報價才不會失真。</p>
+        </details>
+        <details>
+          <summary>如果你們看完覺得不適合直立柔紗簾呢？</summary>
+          <p>我們會直接說。直立柔紗簾不是每個家都適合；如果你的主需求是強遮光、夜間隱私或窗型限制，我們會改看更適合的方向。</p>
+        </details>
+        <details>
+          <summary>新成屋還沒入住，可以先規劃嗎？</summary>
+          <p>可以，而且通常更好規劃。家具進場前，軌道位置、窗簾比例、顏色和整體風格比較容易一起看。</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="final mood-final">
+      <img src="generated-assets/v39-mood-images/final-calm-living-mood.png" alt="夜晚安心的大面窗直立柔紗簾客廳">
+      <div class="wrap" data-reveal>
+        <span class="eyebrow">不要急著下訂</span>
+        <h2>先用 3 張照片，確認你家的大面窗該怎麼處理。</h2>
+        <p class="lead">買對窗簾，不是選到最流行的款式，而是白天舒服、晚上安心、完工後跟客廳比例合得起來。照片傳來，我們先幫你看方向。</p>
+        <div class="final-proof">
+          <span>白天：看刺眼、反光，還是只是太亮。</span>
+          <span>晚上：看樓距、燈光和視線角度。</span>
+          <span>整體：看窗簾要融入客廳，還是會搶走客廳。</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://line.me/R/ti/p/@moxin-curtain" data-track="final_line">傳照片給 LINE</a>
+          <a class="btn btn-light" href="#photos" data-track="final_photos">看要拍哪 3 張</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky" aria-label="快速聯絡">
+    <a href="https://line.me/R/ti/p/@moxin-curtain" data-track="sticky_line">傳照片問方向</a>
+    <a href="#photos" data-track="sticky_photos">看怎麼拍</a>
+  </div>
+
+  <script>
+    const enableMobileCjkWrap = () => {
+      if (window.innerWidth > 680) return;
+      const skipTags = new Set(["SCRIPT", "STYLE", "TEXTAREA", "NOSCRIPT"]);
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          if (!node.nodeValue || !/[\u3400-\u9fff]/.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+          if (skipTags.has(node.parentElement?.tagName)) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach((node) => {
+        node.nodeValue = node.nodeValue.replace(/([\u3400-\u9fff])/g, "$1\u200b");
+      });
+    };
+    enableMobileCjkWrap();
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "mata_lp_view",
+      page_id: "mata_vertical_sheer_copy_v39",
+      source_intent: "premium_sales_page_copy_depth_v39",
+      video_asset: "cloudinary_756cf6ea984e499a8b440d35d9986719_yq3hhe"
+    });
+
+    const cinema = document.querySelector("[data-cinema]");
+    const cinemaTitle = document.querySelector("#cinema-title");
+    const cinemaKicker = document.querySelector("#cinema-kicker");
+    const cinemaCopy = document.querySelector("#cinema-copy");
+    const cinemaMetricA = document.querySelector("#cinema-metric-a");
+    const cinemaMetricB = document.querySelector("#cinema-metric-b");
+    const cinemaMetricC = document.querySelector("#cinema-metric-c");
+    const cinemaSteps = Array.from(document.querySelectorAll("[data-cinema-step]"));
+    const cinemaScenes = [
+      {
+        kicker: "白天坐不住",
+        title: "光很好，卻讓客廳不好坐。",
+        copy: "很多人喜歡大面窗，是因為它亮。但真正住進去後，刺眼、反光、西曬，才是每天會遇到的問題。",
+        metricA: "刺眼",
+        metricB: "低",
+        metricC: "先柔光"
+      },
+      {
+        kicker: "白天調光",
+        title: "好的柔光，是舒服，不是變暗。",
+        copy: "直立柔紗簾的價值，不是把光關掉，而是讓光進來得更柔，讓客廳保留明亮和開闊感。",
+        metricA: "柔化",
+        metricB: "保留亮度",
+        metricC: "看透光"
+      },
+      {
+        kicker: "夜晚安心",
+        title: "晚上要看的，是視線會不會退後。",
+        copy: "室內燈一亮，外面就可能看進來。樓距、角度和活動區位置，才是晚上能不能安心的關鍵。",
+        metricA: "夜間",
+        metricB: "高",
+        metricC: "看視線"
+      }
+    ];
+    const clamp01 = (value) => Math.max(0, Math.min(1, value));
+    const mapRange = (value, from, to) => clamp01((value - from) / (to - from));
+    let cinemaSceneIndex = -1;
+    let cinemaSceneSent = new Set();
+    let cinemaTicking = false;
+    const updateCinema = () => {
+      cinemaTicking = false;
+      if (!cinema) return;
+      const total = Math.max(1, cinema.offsetHeight - window.innerHeight);
+      const progress = clamp01(-cinema.getBoundingClientRect().top / total);
+      const soften = mapRange(progress, .15, .48);
+      const night = mapRange(progress, .58, .86);
+      const sceneIndex = progress < .34 ? 0 : progress < .68 ? 1 : 2;
+      cinema.style.setProperty("--cinema-p", progress.toFixed(4));
+      cinema.style.setProperty("--day-opacity", (1 - night * .78).toFixed(4));
+      cinema.style.setProperty("--night-opacity", night.toFixed(4));
+      cinema.style.setProperty("--curtain-opacity", (.08 + soften * .72 - night * .18).toFixed(4));
+      cinema.style.setProperty("--glare-opacity", (.72 - soften * .5 - night * .16).toFixed(4));
+      cinema.style.setProperty("--sight-opacity", night.toFixed(4));
+      if (sceneIndex !== cinemaSceneIndex) {
+        cinemaSceneIndex = sceneIndex;
+        const scene = cinemaScenes[sceneIndex];
+        cinemaKicker.textContent = scene.kicker;
+        cinemaTitle.textContent = scene.title;
+        cinemaCopy.textContent = scene.copy;
+        cinemaMetricA.textContent = scene.metricA;
+        cinemaMetricB.textContent = scene.metricB;
+        cinemaMetricC.textContent = scene.metricC;
+        cinemaSteps.forEach((step, idx) => step.classList.toggle("is-active", idx === sceneIndex));
+        if (!cinemaSceneSent.has(sceneIndex)) {
+          cinemaSceneSent.add(sceneIndex);
+          window.dataLayer.push({
+            event: "mata_lp_interaction",
+            page_id: "mata_vertical_sheer_copy_v39",
+            action: "cinematic_scroll_scene",
+            scene_index: sceneIndex,
+            scene_label: scene.kicker
+          });
+        }
+      }
+    };
+    const requestCinemaUpdate = () => {
+      if (cinemaTicking) return;
+      cinemaTicking = true;
+      requestAnimationFrame(updateCinema);
+    };
+    updateCinema();
+    window.addEventListener("scroll", requestCinemaUpdate, { passive: true });
+    window.addEventListener("resize", requestCinemaUpdate);
+
+    document.querySelectorAll("[data-track]").forEach((el) => {
+      el.addEventListener("click", () => {
+        window.dataLayer.push({
+          event: "mata_lp_click",
+          page_id: "mata_vertical_sheer_copy_v39",
+          action: el.dataset.track
+        });
+      });
+    });
+
+    document.querySelectorAll("[data-video-track]").forEach((video) => {
+      const fired = new Set();
+      const send = (action) => {
+        if (fired.has(action)) return;
+        fired.add(action);
+        window.dataLayer.push({
+          event: "mata_lp_video",
+          page_id: "mata_vertical_sheer_copy_v39",
+          action,
+          video: video.dataset.videoTrack
+        });
+      };
+      video.addEventListener("play", () => send("play"));
+      video.addEventListener("ended", () => send("complete"));
+      video.addEventListener("timeupdate", () => {
+        if (!video.duration || Number.isNaN(video.duration)) return;
+        const pct = video.currentTime / video.duration;
+        if (pct >= .25) send("progress_25");
+        if (pct >= .5) send("progress_50");
+        if (pct >= .75) send("progress_75");
+      });
+    });
+
+    const dayNightCopy = {
+      day: {
+        label: "白天",
+        title: "白天要的是舒服的亮。",
+        copy: "客廳需要明亮，也需要柔和。重點不是把光關掉，而是把刺眼和反光降下來。"
+      },
+      night: {
+        label: "晚上",
+        title: "晚上要的是視線退後。",
+        copy: "室內一開燈，隱私問題才真正出現。這時要看樓距、角度和你常待的位置。"
+      }
+    };
+    const dnStage = document.querySelector(".dn-stage");
+    const dnLabel = document.querySelector("#dn-label");
+    const dnTitle = document.querySelector("#dn-title");
+    const dnCopy = document.querySelector("#dn-copy");
+    document.querySelectorAll("[data-dn-mode]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const mode = button.dataset.dnMode;
+        const content = dayNightCopy[mode];
+        dnStage.dataset.mode = mode;
+        dnLabel.textContent = content.label;
+        dnTitle.textContent = content.title;
+        dnCopy.textContent = content.copy;
+        document.querySelectorAll("[data-dn-mode]").forEach((item) => {
+          item.classList.toggle("is-active", item === button);
+        });
+        window.dataLayer.push({
+          event: "mata_lp_interaction",
+          page_id: "mata_vertical_sheer_copy_v39",
+          action: "day_night_toggle",
+          mode
+        });
+      });
+    });
+
+    const compareStage = document.querySelector(".compare-stage");
+    const compareRange = document.querySelector(".compare-range");
+    const updateCompareSplit = () => {
+      if (!compareStage || !compareRange) return;
+      compareStage.style.setProperty("--split", `${compareRange.value}%`);
+    };
+    updateCompareSplit();
+    compareRange?.addEventListener("input", () => {
+      updateCompareSplit();
+      window.dataLayer.push({
+        event: "mata_lp_interaction",
+        page_id: "mata_vertical_sheer_copy_v39",
+        action: "day_night_drag",
+        split: compareRange.value
+      });
+    });
+
+    const visualTrack = document.querySelector(".showcase-track");
+    const visualSlides = Array.from(document.querySelectorAll(".visual-slide"));
+    const visualDots = Array.from(document.querySelectorAll("[data-visual-slide]"));
+    const visualPause = document.querySelector(".visual-pause");
+    let visualIndex = 0;
+    let visualPaused = false;
+    let visualTimer;
+    const setVisualSlide = (index, source = "auto") => {
+      if (!visualTrack || !visualSlides.length) return;
+      visualIndex = (index + visualSlides.length) % visualSlides.length;
+      visualTrack.style.transform = `translateX(-${visualIndex * 100}%)`;
+      visualSlides.forEach((slide, idx) => slide.classList.toggle("is-active", idx === visualIndex));
+      visualDots.forEach((dot, idx) => dot.classList.toggle("is-active", idx === visualIndex));
+      window.dataLayer.push({
+        event: "mata_lp_interaction",
+        page_id: "mata_vertical_sheer_copy_v39",
+        action: "visual_card_slide",
+        mode: source,
+        slide_index: visualIndex
+      });
+    };
+    const startVisualTimer = () => {
+      if (!visualTrack || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      clearInterval(visualTimer);
+      visualTimer = setInterval(() => {
+        if (!visualPaused) setVisualSlide(visualIndex + 1);
+      }, 4200);
+    };
+    visualDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        setVisualSlide(Number(dot.dataset.visualSlide), "dot");
+        startVisualTimer();
+      });
+    });
+    visualPause?.addEventListener("click", () => {
+      visualPaused = !visualPaused;
+      visualPause.textContent = visualPaused ? "▶" : "Ⅱ";
+      window.dataLayer.push({
+        event: "mata_lp_interaction",
+        page_id: "mata_vertical_sheer_copy_v39",
+        action: visualPaused ? "visual_card_pause" : "visual_card_play"
+      });
+    });
+    startVisualTimer();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    const revealNodes = Array.from(document.querySelectorAll("[data-reveal]"));
+    revealNodes.forEach((node) => revealObserver.observe(node));
+    const forceVisibleReveals = () => {
+      revealNodes.forEach((node) => {
+        if (node.classList.contains("is-visible")) return;
+        const rect = node.getBoundingClientRect();
+        if (rect.top < window.innerHeight * .92 && rect.bottom > window.innerHeight * -.18) {
+          node.classList.add("is-visible");
+          revealObserver.unobserve(node);
+        }
+      });
+    };
+    forceVisibleReveals();
+    window.addEventListener("load", forceVisibleReveals);
+    window.addEventListener("hashchange", () => window.setTimeout(forceVisibleReveals, 80));
+    window.addEventListener("scroll", forceVisibleReveals, { passive: true });
+    const jumpTarget = new URLSearchParams(window.location.search).get("jump");
+    if (jumpTarget) {
+      window.setTimeout(() => {
+        document.getElementById(jumpTarget)?.scrollIntoView({ behavior: "auto", block: "start" });
+        forceVisibleReveals();
+      }, 120);
+    }
+
+    const sticky = document.querySelector(".sticky");
+    const updateSticky = () => {
+      sticky.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.72);
+    };
+    updateSticky();
+    window.addEventListener("scroll", updateSticky, { passive: true });
+  </script>
+</body>
+</html>
